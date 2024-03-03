@@ -1,62 +1,62 @@
 30 git commands:
 
 
-git clone [url]: Clones a repository from a remote server to your local machine.
+1. git init: Initializes a new Git repository in the current directory.
 
-git commit -m "[message]": Commits staged changes with a descriptive message.
+2. git clone [repository_url]: Clones an existing repository from a URL to create a local copy.
 
-git status: Displays the status of the working directory and staging area.
+3. git add [file]: Adds a file or directory to the staging area for the next commit.
 
-git diff: Shows the changes between the working directory and the staging area.
+4. git commit -m "[commit_message]": Commits the staged changes with a descriptive message.
 
-git diff --staged: Shows the changes between the staging area and the last commit.
+5. git status: Shows the current status of the repository, including tracked/untracked files and changes.
 
-git log: Displays the commit history.
+6. git diff: Shows the changes between the working directory and the staging area.
 
-git branch: Lists all branches in the repository.
+7. git diff --staged: Shows the changes between the staging area and the last commit.
 
-git branch [branch_name]: Creates a new branch.
+8. git log: Displays a history of commits in reverse chronological order.
 
-git checkout [branch_name]: Switches to the specified branch.
+9. git branch: Lists all branches in the repository.
 
-git checkout -b [branch_name]: Creates a new branch and switches to it.
+10. git branch [branch_name]: Creates a new branch with the specified name.
 
-git merge [branch_name]: Merges changes from the specified branch into the current branch.
+11. git checkout [branch_name]: Switches to the specified branch.
 
-git remote: Lists all remote repositories.
+12. git checkout -b [branch_name]: Creates a new branch and switches to it.
 
-git remote -v: Lists all remote repositories with their URLs.
+13. git merge [branch_name]: Merges the specified branch into the current branch.
 
-git remote add [name] [url]: Adds a new remote repository.
+14. git remote: Lists all remote repositories associated with the local repository.
 
-git push [remote] [branch]: Pushes local commits to the remote repository.
+15. git remote add [remote_name] [remote_url]: Adds a new remote repository.
 
-git pull [remote] [branch]: Fetches changes from the remote repository and merges them into the current branch.
+16. git push [remote_name] [branch_name]: Pushes the committed changes to a remote repository.
 
-git fetch [remote]: Fetches changes from the remote repository without merging.
+17.git pull [remote_name] [branch_name]: Fetches changes from a remote repository and merges them into the current branch.
 
-git reset [file]: Removes a file from the staging area, but keeps the changes in the working directory.
+18. git fetch [remote_name]: Fetches changes from a remote repository without merging.
 
-git reset --hard: Resets the working directory and staging area to match the last commit.
+19. git reset HEAD [file]: Unstages a file from the staging area.
 
-git revert [commit]: Reverts a specified commit, creating a new commit with the reverted changes.
+20. git reset --soft [commit]: Resets the current branch's HEAD to a previous commit, keeping staged changes.
 
-git stash: Stashes changes in the working directory, allowing you to work on another task.
+21. git reset --mixed [commit]: Resets the current branch's HEAD to a previous commit, unstaging changes.
 
-git stash pop: Applies the most recently stashed changes to the working directory.
+22. git reset --hard [commit]: Resets the current branch's HEAD to a previous commit, discarding all changes.
 
-git tag: Lists all tags in the repository.
+23. git stash: Stashes changes in the working directory to a stack, allowing you to work on something else temporarily.
 
-git tag [tag_name]: Creates a new tag at the current commit.
+24. git stash apply: Applies the most recent stash to the working directory without removing it from the stack.
 
-git tag -d [tag_name]: Deletes a specified tag.
+25. git stash list: Lists all stashes that are currently saved.
 
-git config: Sets configuration options for Git.
+26. git tag [tag_name]: Creates a lightweight tag at the current commit.
 
-git blame [file]: Shows the last commit that modified each line of a file.
+27. git tag -a [tag_name] -m "[tag_message]": Creates an annotated tag with a message.
 
-git clean: Removes untracked files from the working directory.
+28. git show [tag_name]: Shows the details of a specific tag.
 
-git rebase: This command is used to modify the commit history of a branch by moving or reordering existing commits
+29. git rm [file]: Removes a file from the working directory and stages the removal for commit.
 
-git reflog: record when the tips of branches and other references were updated in the local repository
+30 .git mv [source] [destination]: Moves or renames a file and stages the change for commit.

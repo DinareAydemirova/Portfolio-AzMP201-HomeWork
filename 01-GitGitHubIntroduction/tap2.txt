@@ -1,42 +1,42 @@
 20 linux commands
 
 
-ls: Lists directory contents.
+1. ls: Lists directory contents.
 
-cd: Changes the current directory.
+2. cd: Changes the current directory.
 
-pwd: Prints the current working directory.
+3. pwd: Prints the current working directory.
 
-mkdir: Creates a new directory.
+4. mkdir: Creates a new directory.
 
-rm: Removes files or directories.
+5. rm: Removes files or directories.
 
-cp: Copies files or directories.
+6. cp: Copies files or directories.
 
-mv: Moves or renames files or directories.
+7. mv: Moves or renames files or directories.
 
-touch: Creates an empty file or updates the timestamp of an existing file.
+8. touch: Creates an empty file or updates the timestamp of an existing file.
 
-cat: Concatenates and displays the contents of files.
+9. cat: Concatenates and displays the contents of files.
 
-grep: Searches for patterns in files.
+10. grep: Searches for patterns in files.
 
-find: Searches for files and directories in a directory hierarchy.
+11. find: Searches for files and directories in a directory hierarchy.
 
-chmod: Changes file permissions.
+12. chmod: Changes file permissions.
 
-chown: Changes file ownership.
+13. chown: Changes file ownership.
 
-sudo: Executes a command with superuser (administrative) privileges.
+14. sudo: Executes a command with superuser (administrative) privileges.
 
-tar: Archives files and directories.
+15. tar: Archives files and directories.
 
-gzip: Compresses files.
+16. gzip: Compresses files.
 
-wget: Downloads files from the internet.
+17. wget: Downloads files from the internet.
 
-ssh: Connects to a remote machine over a secure shell.
+18 ssh: Connects to a remote machine over a secure shell.
 
-top: Displays dynamic real-time information about running processes.
+19. top: Displays dynamic real-time information about running processes.
 
-df: Shows disk space usage of file systems.
+20. df: Shows disk space usage of file systems.
