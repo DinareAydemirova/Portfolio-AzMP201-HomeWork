@@ -23,13 +23,13 @@
 
 11. find: Searches for files and directories in a directory hierarchy.
 
-12. chmod: Changes file permissions.
+  12. chmod: Changes file permissions.
 
-13. chown: Changes file ownership.
+  13. chown: Changes file ownership.
 
-14. sudo: Executes a command with superuser (administrative) privileges.
+  14. sudo: Executes a command with superuser (administrative) privileges.
 
-15. tar: Archives files and directories.
+  15. tar: Archives files and directories.
 
 16. gzip: Compresses files.
 
