@@ -1,0 +1,152 @@
+
+/* parent > child-Targets elements that are direct children of another specified element. */
+div > p {
+  background-color: yellow;
+}
+
+
+/* element,element - 	Selects all <div> elements and all <p> elements */
+h2, p {
+  background-color: yellow;
+}
+
+
+/* element element - Select and style every <p> element that is inside <div> elements */
+div p {
+  background-color: rgb(83, 210, 83);
+}
+
+
+/* element>element - Select and style every <p> element where the parent is a <div> element */
+div > p {
+  background-color: rgb(255, 0, 191);
+}
+
+
+/* element+element - Select and style the first <p> element that are placed immediately after <div> elements: */
+div + p {
+  background-color: yellow;
+}
+
+
+/* element ~ element - Selects every <ul> element that is preceded by a <p> element*/
+  p ~ ul {
+  background: #ff0000;
+}
+
+
+
+/* [attribute] - Style all <a> elements with a target attribute: */
+a[target] {
+  background-color: yellow;
+}
+
+
+/* [attribute=value] - Selects all elements with target="_blank" */
+a[target="_blank"] {
+  background-color: yellow;
+}
+
+
+/* [attribute*="value"] - Set a background color on all <div> elements that have a class attribute value containing "test"*/
+div[class*="test"] {
+  background: #ffff00;
+}
+
+
+/* [attribute$=value]- Set a background color on all <div> elements that have a class attribute value that ends with "test" */
+div[class$="test"] {
+  background: #ffff00;
+}
+
+
+/* [attribute^=value] -Set a background color on all <div> elements that have a class attribute value that begins with "test" */
+div[class^="test"] {
+  background: #ffff00;
+}
+
+
+/* :active - selects the active list */
+a:active {
+  background-color: rgb(105, 49, 237);
+}
+
+
+/* ::after - Insert some text after the content of each <p> element */
+p::after {
+  content: " - Remember this";
+}
+
+
+/* ::before- Insert some text before the content of each <p> element */
+p::before {
+  content: "Read this: ";
+}
+
+/* :empty - 	Selects every <p> element that has no children */
+p:empty {
+  background: #ff0000;
+}
+
+
+/* :first-child- Select and style every <p> element that is the first child of its parent */
+p:first-child {
+  background-color: rgb(0, 255, 229);
+}
+
+
+/* :link - Select and style unvisited links */
+a:link {
+  background-color: rgb(227, 133, 133);
+}
+
+/* :not - Set a background color for all elements that are not a <p> element */
+p {
+  color: #000000;
+}
+:not(p) {
+  color: #ff9d00;
+}
+
+
+/* :optional -Select and style only if the <input> element does not have a "required" attribute */
+input:optional {
+  background-color: rgb(0, 200, 255);
+}
+
+
+/* :read-only - Select and style only if the input element is "readonly" */
+input:read-only {
+  background-color: rgb(255, 0, 149);
+}
+
+
+/* :valid - Select and style only if the value of the <input> element is valid */
+input:valid {
+  background-color: rgb(195, 255, 0);
+}
+
+
+/* :read-write - Selects input elements with the "readonly" attribute NOT specified */
+input:read-write {
+  background-color: rgb(255, 115, 0);
+}
+
+
+
+/* ::selection  - Make the selected text red on a yellow background */
+::selection {
+  color: red;
+  background: rgb(166, 0, 255);
+}
+
+
+/* :required - Select and style only if the <input> element has a "required" attribute*/
+input:required {
+  background-color: rgb(0, 174, 255);
+}
+
+/*  ::marker - Style the markers of list items */
+::marker {
+  color: rgb(93, 0, 255);
+}
