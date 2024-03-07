@@ -1,36 +1,36 @@
 
 /* parent > child-Targets elements that are direct children of another specified element. */
 div > p {
-  background-color: yellow;
+  color: rgb(255, 55, 0);
 }
 
 
-/* element,element - 	Selects all <div> elements and all <p> elements */
-h2, p {
+/* element,element - 	Selects all <i> elements and all <sup> elements */
+i, sup {
   background-color: yellow;
 }
 
 
 /* element element - Select and style every <p> element that is inside <div> elements */
-div p {
+span p {
   background-color: rgb(83, 210, 83);
 }
 
 
 /* element>element - Select and style every <p> element where the parent is a <div> element */
-div > p {
-  background-color: rgb(255, 0, 191);
+ol > li {
+  color: rgb(255, 0, 191);
 }
 
 
 /* element+element - Select and style the first <p> element that are placed immediately after <div> elements: */
 div + p {
-  background-color: yellow;
+  background-color: rgb(255, 179, 0);
 }
 
 
-/* element ~ element - Selects every <ul> element that is preceded by a <p> element*/
-  p ~ ul {
+/* element ~ element - Selects every <ul> element that is preceded by a <span> element*/
+  span ~ ul {
   background: #ff0000;
 }
 
@@ -38,7 +38,7 @@ div + p {
 
 /* [attribute] - Style all <a> elements with a target attribute: */
 a[target] {
-  background-color: yellow;
+  background-color: rgb(40, 200, 225);
 }
 
 
@@ -49,20 +49,20 @@ a[target="_blank"] {
 
 
 /* [attribute*="value"] - Set a background color on all <div> elements that have a class attribute value containing "test"*/
-div[class*="test"] {
-  background: #ffff00;
+span[class*="test"] {
+  color: blueviolet;
 }
 
 
 /* [attribute$=value]- Set a background color on all <div> elements that have a class attribute value that ends with "test" */
 div[class$="test"] {
-  background: #ffff00;
+  background: #00ffff;
 }
 
 
-/* [attribute^=value] -Set a background color on all <div> elements that have a class attribute value that begins with "test" */
-div[class^="test"] {
-  background: #ffff00;
+/* [attribute^=value] -Set a background color on all <div> elements that have a class attribute value that begins with "text" */
+div[class^="text"] {
+  background: #ff0011;
 }
 
 
@@ -73,24 +73,26 @@ a:active {
 
 
 /* ::after - Insert some text after the content of each <p> element */
-p::after {
+b::after {
   content: " - Remember this";
 }
 
 
 /* ::before- Insert some text before the content of each <p> element */
-p::before {
+strong::before {
   content: "Read this: ";
 }
 
 /* :empty - 	Selects every <p> element that has no children */
 p:empty {
-  background: #ff0000;
+  background: #ff00e6;
+  width: 100px;
+  height: 20px;
 }
 
 
 /* :first-child- Select and style every <p> element that is the first child of its parent */
-p:first-child {
+sub:first-child {
   background-color: rgb(0, 255, 229);
 }
 
@@ -101,17 +103,17 @@ a:link {
 }
 
 /* :not - Set a background color for all elements that are not a <p> element */
-p {
+mark {
   color: #000000;
 }
-:not(p) {
+:not(mark) {
   color: #ff9d00;
 }
 
 
 /* :optional -Select and style only if the <input> element does not have a "required" attribute */
 input:optional {
-  background-color: rgb(0, 200, 255);
+  background-color: rgb(81, 79, 79);
 }
 
 
@@ -136,7 +138,7 @@ input:read-write {
 
 /* ::selection  - Make the selected text red on a yellow background */
 ::selection {
-  color: red;
+  
   background: rgb(166, 0, 255);
 }
 
