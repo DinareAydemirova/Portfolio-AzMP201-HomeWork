@@ -1,89 +1,89 @@
 
-/* parent > child-Targets elements that are direct children of another specified element. */
+/* parent > child- div taginin birbaşa childi olan p taginə style verir */
 div > p {
   color: rgb(255, 55, 0);
 }
 
 
-/* element,element - 	Selects all <i> elements and all <sup> elements */
+/* element,element - 	büten i və sup elementləri seçir*/
 i, sup {
   background-color: yellow;
 }
 
 
-/* element element - Select and style every <p> element that is inside <div> elements */
+/* element element - span elementinin içində olan bütün p elementlərini seçir və style verir */
 span p {
   background-color: rgb(83, 210, 83);
 }
 
 
-/* element>element - Select and style every <p> element where the parent is a <div> element */
+/* element>element - parenti ol elementi olan bütün li elementlərini seçir */
 ol > li {
   color: rgb(255, 0, 191);
 }
 
 
-/* element+element - Select and style the first <p> element that are placed immediately after <div> elements: */
+/* element+element - div elementindən dərhal sonra gələn p elementini seçir: */
 div + p {
   background-color: rgb(255, 179, 0);
 }
 
 
-/* element ~ element - Selects every <ul> element that is preceded by a <span> element*/
+/* element ~ element - Qarşısında <span> elementi olan hər <ul> elementini seçir*/
   span ~ ul {
   background: #ff0000;
 }
 
 
 
-/* [attribute] - Style all <a> elements with a target attribute: */
+/* [attribute] - target atributu olan bütün a elementlərini seçir */
 a[target] {
   background-color: rgb(40, 200, 225);
 }
 
 
-/* [attribute=value] - Selects all elements with target="_blank" */
+/* [attribute=value] - target="_blank" olan bütün attributları seçir */
 a[target="_blank"] {
   background-color: yellow;
 }
 
 
-/* [attribute*="value"] - Set a background color on all <div> elements that have a class attribute value containing "test"*/
+/* [attribute*="value"] - class attribut value testə bərabər olan bütün span elementlərini seçir*/
 span[class*="test"] {
   color: blueviolet;
 }
 
 
-/* [attribute$=value]- Set a background color on all <div> elements that have a class attribute value that ends with "test" */
+/* [attribute$=value]- class attribute value test ilə bitən bütün div elementlərini seçir*/
 div[class$="test"] {
   background: #00ffff;
 }
 
 
-/* [attribute^=value] -Set a background color on all <div> elements that have a class attribute value that begins with "text" */
+/* [attribute^=value] - class attribute value  "text"  ilə başlayan bütün div elementlərini seçir*/
 div[class^="text"] {
   background: #ff0011;
 }
 
 
-/* :active - selects the active list */
+/* :active - linkə toxunanda rəngini dəyişdirir */
 a:active {
   background-color: rgb(105, 49, 237);
 }
 
 
-/* ::after - Insert some text after the content of each <p> element */
+/* ::after - Hər <b> elementinin məzmunundan sonra mətn daxil edir*/
 b::after {
   content: " - Remember this";
 }
 
 
-/* ::before- Insert some text before the content of each <p> element */
+/* ::before- hər strong elementindən əvvəl mətn daxil edir */
 strong::before {
   content: "Read this: ";
 }
 
-/* :empty - 	Selects every <p> element that has no children */
+/* :empty - contentin olmayan pe elementini seçir */
 p:empty {
   background: #ff00e6;
   width: 100px;
@@ -91,18 +91,18 @@ p:empty {
 }
 
 
-/* :first-child- Select and style every <p> element that is the first child of its parent */
+/* :first-child- parentinin ilk childı olan sub elementini seşir */
 sub:first-child {
   background-color: rgb(0, 255, 229);
 }
 
 
-/* :link - Select and style unvisited links */
+/* :link - Baxılmamış linkləri seşir */
 a:link {
   background-color: rgb(227, 133, 133);
 }
 
-/* :not - Set a background color for all elements that are not a <p> element */
+/* :not - mark elementi olmayan bütün elementlərə style verir */
 mark {
   color: #000000;
 }
@@ -111,44 +111,43 @@ mark {
 }
 
 
-/* :optional -Select and style only if the <input> element does not have a "required" attribute */
+/* :optional -requirəd attributu olmayan bütün inputları seçir */
 input:optional {
   background-color: rgb(81, 79, 79);
 }
 
 
-/* :read-only - Select and style only if the input element is "readonly" */
+/* :read-only - input elementinin readonly attributu varsa seçir  */
 input:read-only {
   background-color: rgb(255, 0, 149);
 }
 
 
-/* :valid - Select and style only if the value of the <input> element is valid */
+/* :valid - value si olan bütün input elementlərini seçir */
 input:valid {
   background-color: rgb(195, 255, 0);
 }
 
 
-/* :read-write - Selects input elements with the "readonly" attribute NOT specified */
+/* :read-write - readonly attributu olmayan input elementlərini seçir */
 input:read-write {
   background-color: rgb(255, 115, 0);
 }
 
 
 
-/* ::selection  - Make the selected text red on a yellow background */
+/* ::selection  - hansısa seçilən textin backgrounduna style verir */
 ::selection {
-  
-  background: rgb(166, 0, 255);
+   background: rgb(166, 0, 255);
 }
 
 
-/* :required - Select and style only if the <input> element has a "required" attribute*/
+/* :required - required attributu olan inputları seçir*/
 input:required {
   background-color: rgb(0, 174, 255);
 }
 
-/*  ::marker - Style the markers of list items */
+/*  ::marker - Siyahı elementlərinin markerlərini styleın dəyişir */
 ::marker {
   color: rgb(93, 0, 255);
 }
