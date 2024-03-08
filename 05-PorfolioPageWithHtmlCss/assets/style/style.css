@@ -1,0 +1,274 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    background-color: #2C3E50;
+    height: 104px;
+    
+}
+.name{
+    color: white;
+    
+}
+.container{
+width: 1320px;
+margin: 0 auto;
+background-color:#2C3E50 ;
+height: 104px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+.pages a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    margin:0 10px;
+    font-weight: bold;
+}
+
+.rightBox:hover{
+    color: #1ABC9C;
+    
+}
+.mainSec{
+    background-color: #1ABC9C;
+    height: 678px;
+    
+}
+.main{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 678px;
+    color: white;
+    justify-content: center;
+    
+    
+}
+.avatar{
+    width: 239px;
+}
+.start{
+    font-size: 64px;
+     margin-top: 48px;
+}
+.vectors{
+    width: 112px;
+    margin: 0 12px;
+    border: 2px solid white;
+    border-radius: 4px;
+}
+.star{
+    display: flex;
+    align-items: center;
+    margin-top: 28px;
+}
+.artist{
+    font-size: 24px;
+    margin-top: 24px;
+}
+.port{
+    width: 297px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    font-size: 48px;
+    color: #2C3E50;
+}
+.figure{
+    display: flex;
+    align-items: center;
+    margin-top: 28px;
+    margin-bottom: 20px;
+}
+.lines{
+    width: 112px;
+    margin: 0 12px;
+    border: 2px solid #2C3E50;
+    border-radius: 4px;
+}
+
+.image{
+    width: 400px;
+    height: 289px;
+    left: 20px;
+    border-radius: 8px;
+    margin: 20px;
+}
+.images{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+   
+}
+
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutSec{
+    background-color: #1ABC9C;
+    height: 580px;
+    color: white;
+}
+.about{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 96px;
+}
+.word{
+    width: 1290px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 96px;
+    font-size: 48px;
+
+}
+.pics{
+    width: 112px;
+    margin: 0 12px;
+    border: 2px solid white;
+    border-radius: 4px;
+
+}
+.starBox{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.texts{
+    display: flex;
+    align-items: center;
+   
+}
+.text1{
+    width: 416px;
+    height: 120px;
+   margin-left: auto;
+   font-size: 20px;
+   font-weight: 300px;
+   line-height: 30px;
+   margin-right: 10px;
+}
+.text2{
+    width: 416px;
+    height: 120px;
+    margin-right: auto;
+    font-size: 20px;
+   font-weight: 300px;
+   line-height: 30px;
+   margin-right: 10px;
+}
+.download{
+    margin-top: 100px;
+    background-color: #1ABC9C;
+    border:2px solid white;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 20px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+   
+}
+.rightBox:hover{
+    transition: color 0.3s
+}
+.download:hover{
+    background-color: white;
+    
+}
+.download:hover{
+    color: black;
+}
+
+.icon{
+    margin-right: 10px;
+}
+.icon:hover{
+    color: black
+}
+.contactForm{
+    height: 850px;
+}
+.contact{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.contactMe{
+     width: 335px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    font-size:48px;
+     color: #2C3E50;
+}
+input[type=text], input[type=email], input[type=tel], textarea {
+    width: 600px;
+    height: 88px;
+    border: none;
+  outline: none;
+  border-bottom: 1px solid #ccc;
+  }
+ 
+  .submit{
+    background-color: #1ABC9C;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    margin-right: 455px;
+    margin-top: 15px;
+  }
+
+  .footer{
+    background-color: #2C3E50;
+    height:273px;
+    color: white;
+  }
+  .containerFooter{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-left: 130px;
+    
+  }
+  .location{
+    margin-top:  50px;
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+ 
+ .underTexte{
+    color: #ccc;
+ }
+ .link{
+    color: #1ABC9C;
+ }
+ .copyright{
+    background-color: #1a252f;
+    height: 72px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+ }
+
+ 
+  
+  
