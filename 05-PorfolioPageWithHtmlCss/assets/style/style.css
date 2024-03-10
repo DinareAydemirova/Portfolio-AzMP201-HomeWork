@@ -178,8 +178,6 @@ header {
 }
 
 .word {
-    width: 1290px;
-    height: 50px;
     display: flex;
     justify-content: center;
     margin-top: 96px;
@@ -213,7 +211,6 @@ header {
     height: 120px;
     margin-left: auto;
     font-size: 20px;
-    font-weight: 300px;
     line-height: 30px;
     margin-right: 10px;
 }
