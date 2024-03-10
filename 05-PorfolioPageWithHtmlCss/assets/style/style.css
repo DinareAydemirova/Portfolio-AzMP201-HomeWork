@@ -64,7 +64,7 @@ header {
 }
 
 .avatar {
-    width: 250px;
+    width: 280px;
 }
 
 .start {
@@ -89,6 +89,7 @@ header {
 .artist {
     font-size: 24px;
     padding-bottom: 104px;
+   
 }
 .portfolio {
     display: flex;
@@ -139,7 +140,7 @@ header {
 .sekil{
     position: relative;
     width: 400px;
-    height: 290px;
+    height: 289px;
    
    
 }
