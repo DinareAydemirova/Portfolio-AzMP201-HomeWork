@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    height: 5000px;
+   
+}
+.boxes{
+   width: 400px;
+   height: 400px;
+   background-color: wheat;
+   border: 2px solid green; 
+   
+}
+.boxA{
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    margin: 10px;
+    position: absolute;
+    
+}
+
+.boxB{
+    width: 60px;
+    height: 60px;
+    background: rgba( 0,0,0,0.4 );
+    margin: 10px;
+    position: relative;
+    top: 40px;
+    right: 10px;
+   
+}
+.boxC{
+    width: 60px;
+    height: 60px;
+    background-color:yellow;
+    margin: 10px;
+    
+}
+.boxBC{
+    position: relative;
+    left: 20px;
+    bottom: 20px;
+   
+}
+.boxE{
+    width: 60px;
+    height: 60px;
+    background-color: green;
+    margin: 90px;
+}
+.boxD{
+    width: 60px;
+    height: 60px;
+    background-color: orange;
+   
+}
+.Dbox{
+    display: flex;
+    justify-content: end;
+    position: sticky;
+    top: 0;
+    right:0;
+    z-index: 2;
+    
+   
+}
+
+.boxF{
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    
+}
+.Fbox{
+    position: fixed;
+    top: 190px; 
+    right: 0px; 
+    display: flex;
+    justify-content: end;
+    z-index: 1;
+}
