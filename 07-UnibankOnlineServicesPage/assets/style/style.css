@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: black;
+    height: 143px;
+    top: 0;
+    font-family: CocoSharp, Arial;
+    
+}
+body{
+    font-family: CocoSharp, Arial;
+    background-color: black;
+    color: white;
+    
+}
+.topBar{
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+}
+a{
+    text-decoration: none;
+    color: white;
+   
+    
+}
+.leftPages a{
+    padding: 7px;
+    
+}
+
+.topBar{
+    font-size: 7px;
+}
+
+.private{
+   
+    border: 1px solid #ff7a00;
+    border-radius: 5px;
+    color: #ff7a00;
+    background-color: rgba(255, 255, 255, 0.164);
+    padding: 9px 22px;
+    margin-left: 5px;
+}
+.corparate{
+    border-radius: 5px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.164);
+    padding: 9px 22px;
+    font-size: 15px;
+    
+}
+img[class="sun"]{
+    width: 20px;
+    height:20px ;
+   
+}
+.sunBox{
+   border: 1px solid white;
+   background-color: white;
+   padding: 9px 3px;
+   border-radius: 5px;
+   margin-left: 5px;
+}
+.fa-sun{
+ color: black;
+}
+.aze{
+    padding: 9px 9px;
+    background-color: rgba(255, 255, 255, 0.164);
+    border-radius: 5px;
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.fa-magnifying-glass{
+    padding: 11px 10px;
+    background-color: rgba(255, 255, 255, 0.164);
+    border-radius: 5px;
+    font-size: 15px;
+    margin-left: 5px;
+}
+img{
+    width: 25px; 
+  height: auto;
+    margin-right: 20px;
+    
+}
+.bottomBar{
+    color: white;
+    padding-top: 40px;
+    font-size: 20px;
+    display: flex;
+    font-size: 17px;
+    font-weight: 700;
+}
+.rightBottomPages{
+ margin-left: 145px;
+ 
+}
+.cards{
+    padding-left: 40px;
+}
+.tel{
+margin-left: 330px;
+border: 0.5px solid white;
+padding: 12px;
+border-radius: 30px;
+}
+.fa-phone{
+    color: #ff7a00;
+}
+.topBoxes{
+    display: flex;
+    
+}
+.bottomBox{
+    display: flex;
+}
+.main{
+    margin: 10px 170px;
+}
+.box{
+    border: 1px slid;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.077);
+    margin: 10px;
+    border-radius: 10px;
+    width: 372px;
+    height: 283px;
+    text-align: center;
+   
+}
+h2{
+    padding: 20px
+}
+h3{
+    padding: 20px;
+    font-size: 20px;
+}
+.phone{
+    padding-left: 18px;
+    width: 90px; 
+    height: auto;
+    color: #ff7a00;
+}
+p{
+    font-size: 14px;
+}
+.fa-circle-info{
+    padding: 10px;
+    border: 1px solid #ff7a00;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 20px;
+   
+}
