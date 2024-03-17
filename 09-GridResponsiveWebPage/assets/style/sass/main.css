@@ -2,8 +2,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
+header {
+  display: inline;
+}
 header .topNav {
   display: flex;
   justify-content: space-between;
@@ -27,12 +31,20 @@ header .topNav .rightSide {
   margin-right: 50px;
 }
 header .topNav .rightSide .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  gap: 5px;
 }
-header .topNav .rightSide .social .fa-brands {
+header .topNav .rightSide .social div {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   background-color: white;
-  width: 30px;
-  height: 30px;
 }
 header .bottomNav {
   height: 80px;
@@ -75,7 +87,7 @@ header .bottomNav .pages .quotePage:hover {
 }
 header .mainNav {
   height: 800px;
-  background-image: url(../images/carousel-1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.604), rgba(0, 0, 0, 0.558)), url(../images/carousel-1.jpg);
   background-repeat: no-repeat;
   color: white;
   display: flex;
@@ -83,7 +95,7 @@ header .mainNav {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  font-size: 45px;
+  font-size: 35px;
 }
 header .mainNav .text {
   margin: 0 250px;
@@ -407,15 +419,22 @@ footer .container {
 footer .container .address h2 {
   margin-bottom: 40px;
 }
-footer .container .address .fa-brands {
-  width: 35px;
-  height: 35px;
-  border: 1px solid white;
-  transition: 0.3s;
+footer .container .address .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-right: 200px;
+  gap: 7px;
 }
-footer .container .address .fa-brands:hover {
-  background-color: white;
-  color: #AB7442;
+footer .container .address .social div {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid white;
 }
 footer .container .address i {
   color: white;
@@ -458,7 +477,7 @@ footer .container .address button {
     display: none;
   }
   header .pages .fa-bars {
-    display: block;
+    display: block !important;
   }
 }
 @media only screen and (max-width: 1120px) {
