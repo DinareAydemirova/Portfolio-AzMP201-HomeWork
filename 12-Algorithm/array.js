@@ -196,7 +196,7 @@
 
 //?  13. Verilmiş array-in 2-dən artıq böyük hərfi olan elementlərini çapa çıxaran proqram yazın
 
-// let arr = [2, 9, -5, -4, "AzerBayCan", true, 12, "LANKARAN", "LimOn", 182, 4];
+//  let arr = [2, 9, -5, -4, "AzerBayCan", true, 12, "LANKARAN", "LimOn", 182, 4];
 
 // for (let i = 0; i < arr.length; i++) {
 //     if (typeof arr[i] === 'string') {
