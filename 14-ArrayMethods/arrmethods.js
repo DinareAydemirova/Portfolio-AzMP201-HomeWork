@@ -255,13 +255,13 @@ let students = [
 ];
 
 //? - Bütün elementləri konsola yazın
-//   function names(students){
-//     for (let i = 0; i < students.length; i++) {
-//        console.log(students[i])
+  // function names(students){
+  //   for (let i = 0; i < students.length; i++) {
+  //      console.log(students[i])
 
-//     }
-//   }
-//   names(students)
+  //   }
+  // }
+  // names(students)
 
 //? - Bütün tələbələrin adlarını konsola yazın - ad: Qurban
 
@@ -682,17 +682,3 @@ let students = [
 
 
 
-
-// result=students.filter(elem=>{
- 
-//   return elem.hobbies.includes("gaming")
-// })
-
-// console.log(result);
-
-result=students.reduce((acc ,elem)=>{
-  
-  return acc+ elem.age
-},0)
-
-console.log(result);
