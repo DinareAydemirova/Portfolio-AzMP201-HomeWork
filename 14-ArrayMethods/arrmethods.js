@@ -655,14 +655,15 @@ let students = [
 //? 14 Verilmiş ədədin bölənlərinin sayını tapan funksiya tərtib edin.
 
 // function findNumberOfDivisors(n) {
-//   let count = 0;
+//   count=0
 //   for (let i = 1; i <= n; i++) {
 //     if (n % i == 0) {
-//       console.log(i);
+//       count++
 //     }
 //   }
+//   return count
 // }
-// findNumberOfDivisors(30);
+// console.log(findNumberOfDivisors(30));
 
 // ? 15. daxil edilmiş cümlə daxilində boşluqların sayini tapan function yazin
 
@@ -678,3 +679,20 @@ let students = [
 //     }
 //     console.log(findSpaceCounts("fhfhef sfdiheru ifhu"));
 
+
+
+
+
+// result=students.filter(elem=>{
+ 
+//   return elem.hobbies.includes("gaming")
+// })
+
+// console.log(result);
+
+result=students.reduce((acc ,elem)=>{
+  
+  return acc+ elem.age
+},0)
+
+console.log(result);
