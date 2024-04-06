@@ -331,22 +331,118 @@ let students = [
 
 //? - Müəllimlərin baş hərflərini böyük hərflə yazın
 
+// const convertCapital=students.forEach(student=>{
+//   student.teacher.forEach(teacher=>{
+//     console.log(teacher.name.charAt(0).toUpperCase()+ teacher.name.slice(1));
+//   })
+// })
+
 //? - Şifrəsində rəqəm olmayan tələbələri tapın
 
 //? - Qızların arasında id-si 3 olan müəllimlərin adını deyin
+
+// const findId = students.filter(
+//   (student) => student.id == 3 && student.gender == "girl"
+// );
+
+// findId.forEach((student) => {
+//   student.teacher.forEach((teacher) => {
+//     console.log(`teacher: ${teacher.name}`);
+//   });
+// });
+
 //? - Tələbələrin adlarını və müəllim saylarını çapa verin
+
+// const findNameSurname=students.forEach(student=>{
+//   console.log(`name: ${student.name}`);
+//   console.log(student.teacher.length);
+// })
+
 //? - Tələbələrin adlarını username və şifrələrindən ibarət yeni array yaradın [{name:qurban,username:qurban123,password:qqq123}]
+
+// result= students.reduce((acc, elem)=>{
+//     acc.push(` name: ${elem.name}, username: ${elem.loginDetail.username}`)
+//     return acc
+// },[])
+// .flat()
+// console.log(result);
+
 //? - Müəllimlərin adlarından sonra müəllim sözünü əlavə edin. String metod istifadə edin
+
+// const teanherNames=students.forEach(student=>{
+//    student.teacher.forEach((teacher)=>{
+//     console.log(teacher.name.concat("  " , "teacher"));
+//    })
+// })
+
 //? - Hamının şifrəsinin əvvəlinə 3 ədəd boşluq əlavə edin. String metod istifadə edin
+
+// const password= students.map(student=>{
+//    console.log(student.loginDetail.password.padStart(student.loginDetail.password.length + 3 ," "));
+// })
+
 //? - Hamının şifrəsinin ilk 4 simvolu görsənsin yerdə qalanlar "*" ilə əvəz olunsun. String metod istifadə edin
+
+// const password= students.map(student=>{
+//    console.log(student.loginDetail.password.substring(0, 4).padEnd(student.loginDetail.password.length, "*"));
+// })
+
 //? - Hamının soyadının uzunluğu adının uzunluğu qədər olsun. String metod istifadə edin
+
+// const surnameName=students.forEach(student=>{
+//   console.log(student.name , student.surname.slice(0 ,student.name.length));
+// })
+
 //? - Bütün tələbələrin yaşlarının toplamı nə qədərdir
+
+// let sumAges=0
+// students.forEach(student=>{
+//    sumAges+=student.age
+// })
+// console.log(sumAges);
+
 //? - Bütün tələbələrin cəmi bal ortalaması nə qədərdir
+
+// let sumAvgPoint=0
+// students.map(student=>{
+//   sumAvgPoint+= student.avgPoint
+// })
+// console.log(sumAvgPoint);
+
 //? - "book" həvəsini olan tələbələrin siyahısını çap edin
+
+// const studentsWithBookHobby = students
+//     .filter(student => student.hobbies.includes("book"))
+//     .map(student => student.name)
+
+// console.log(studentsWithBookHobby);
+
 //? - Tələbələrin yaş ortalaması nədir?
+
+// const totalAge=students.reduce((acc, student)=>acc+ student.age ,0)
+// const avgAge= totalAge/students.length
+// console.log(avgAge);
+
 // ?- Hər bir tələbə üçün cinsiyət və yaşı göstərən bir obyekt yaradin
+
+// const newObj=students.map(student=>{
+//   return {
+//     gende: student.gender,
+//     age: student.age
+//   }
+// })
+// console.log(newObj);
+
 //? - Bütün tələbələrin ad və soyadlarının uzunluqlarının cəmi hansıdır
+
+// const sumOfLengthNameSurname=students.map(student=>{
+//   console.log(student.name.length+student.surname.length);
+// })
+
 //? - Tələbələrin adlarını tərsinə çevirin.
+
+// const reversedNames = students.map(student => student.name.split('').reverse().join(''));
+// console.log(reversedNames);
 
 //? - "gamig" həvəsi olan tələbələrin array-ini yaradın
 
@@ -365,3 +461,156 @@ let students = [
 // },[])
 // .flat()
 // console.log(result);
+
+//? 1. Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array.(Array method-lardan istifadə edin)
+
+// const getFirst = (array, n = 1) => {
+//   return array.slice(0, n);
+// };
+
+// console.log(getFirst([1, 73, 99, 20]));
+// console.log(getFirst([1, 73, 99, 20], 2));
+// console.log(getFirst([1, 73, 99, 20], 0));
+// console.log(getFirst([1, 73, 99, 20], 4));
+
+//? 2. Write a simple JavaScript function to join all elements of the following array into a string.
+
+// const join=(array, operator)=>{
+//    return array.join(operator)
+// }
+
+// console.log(join([1, 73, 99, 20], "*"))
+// console.log(join([1, 73, 99, 20], "/"))
+
+// ? 3. Write a JavaScript program(function) that accepts a string as input and swaps the case of each character. For example, if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'
+
+// const swamp=(string)=>{
+//   return string.split('').map(letter=>{
+//     if(letter===letter.toLowerCase()){
+//       return letter.toUpperCase()
+//     }else{
+//       return letter.toLowerCase()
+//     }
+//   }).join('')
+// }
+// console.log(swamp("The Quick Brown Fox"));
+
+//? 4. Write a method that clears the array from all unnecessary elements, like false, undefined, empty strings, zero, null.
+
+// const clear=(array)=>{
+//   return array.filter(elem=>{
+//     return elem!== false && elem !== undefined && elem !== null && elem !== 0 && elem !== '';
+//   })
+// }
+// console.log(clear([0, 1, false, 2, undefined, '', 3, null]));
+
+//? 5. Write a method that returns a duplicate-free array.
+
+//? 6. Write a function that compares two arrays and returns true if they are identical.
+
+// const isEqual=(array1 , arry2)=>{
+// if(array1.length !== arry2.length){
+//   return false
+// }
+// return array1.every((elem , index)=>elem===arry2[index])
+// }
+
+// console.log(isEqual([1, 2, 3, 4], [1, 2, 3, 4]))
+// console.log(isEqual([1, 2, 3, 4], [1, 2, 3, 4, 5]))
+// console.log(isEqual([1, 2, 3, 4], [1, 2, 3, 4, false]))
+// console.log(isEqual([1, 2, 3, 4, false], [1, 2, 3, 4, false]))
+
+//? 10 studentlərin ortalama score'nu yeni bir arrayda yığın
+
+// const calculateAverage = (scores) =>
+//   scores.reduce((total, score) => total + score, 0) / scores.length;
+
+// const findAverageScores = (students) =>
+//   students.map((student) => ({
+//     name: student.name,
+//     averageScore: calculateAverage(student.scores),
+//   }));
+
+// const student = [
+//   { name: "Ali", scores: [90, 85, 92] },
+//   { name: "Davud", scores: [100, 100, 100] },
+//   { name: "Mammal", scores: [75, 80, 85] },
+//   { name: "Camil", scores: [90, 95, 85] },
+// ];
+// console.log(findAverageScores(student));
+
+//? 11 webTechs arrayında olan elementlərin uzunluğu 4'dən böyük olanları yeni bir arraya yığın
+
+// const webTechs = [
+//   "HTML",
+//   "CSS",
+//   "JS",
+//   "React",
+//   "JS",
+//   "Redux",
+//   "Node",
+//   "JS",
+//   "MongDB",
+// ];
+//  newArr= webTechs.filter(elem=>elem.length>4)
+// console.log(newArr);
+
+//? 12 roduct arrayindəki producların qiymətləri cəmini və ortalamasını tapın\
+
+// const products = [
+//   {
+//     id: 1,
+//     title: "Smartphone",
+//     description: "A high-end smartphone with the latest features.",
+//     price: 799.99,
+//   },
+//   {
+//     id: 2,
+//     title: "Laptop",
+//     description: "Powerful laptop with a large screen and fast processor.",
+//     price: 1299.99,
+//   },
+//   {
+//     id: 3,
+//     title: "Coffee Maker",
+//     description: "An automatic coffee maker with a built-in grinder.",
+//     price: 99.99,
+//   },
+//   {
+//     id: 4,
+//     title: "Headphones",
+//     description: "Wireless over-ear headphones with noise-cancellation.",
+//     price: 199.99,
+//   },
+//   {
+//     id: 5,
+//     title: "Smart TV",
+//     description: "55-inch 4K Smart TV with streaming apps built-in.",
+//     price: 699.99,
+//   },
+// ];
+
+// const sumOfPrices =
+//   products.reduce((total, product) => total + product.price, 0) /
+//   products.length;
+
+// console.log(sumOfPrices);
+
+
+
+//? 13 countries arrayində a ilə başlayıb a ilə bitən ölkələri tapın
+
+// let countries = ["Azerbaijan", "Albania", "Germany", "America", "Russian"];
+
+// const startEndA=countries.filter(country=> country.charAt(0)==="A" && country.charAt(country.length-1)==="a")
+// console.log(startEndA);
+
+// ? 14 Verilmiş ədədin bölənlərinin sayını tapan funksiya tərtib edin.
+
+//? 15 daxil edilmiş cümlə daxilində boşluqların sayini tapan function yazin
+
+// const findSpaceCounts=(str)=>{
+//   const spaces=str.split(' ').length-1 
+//   return spaces
+// }
+// console.log(findSpaceCounts("sdhfshkdjf sdfjksdf dfkjsdf"));
