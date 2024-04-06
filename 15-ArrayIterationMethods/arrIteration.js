@@ -254,11 +254,14 @@ let students = [
   },
 ];
 
+
+
+
 //? - Bütün elementləri konsola yazın
 
-  // let result=students.filter((allelems)=>{
-  //   console.log(allelems);
-  // })
+// let result=students.filter((allelems)=>{
+//   console.log(allelems);
+// })
 
 //? - Bütün tələbələrin adlarını konsola yazın - ad: Qurban
 
@@ -284,7 +287,7 @@ let students = [
 // const mostHobbies=students.reduce((maxStudent , currentStudent)=>{
 //     return currentStudent.hobbies.length<maxStudent.hobbies.length ? maxStudent:currentStudent
 // })
-// console.log(`name: ${mostHobbies.name}  hobbies: ${mostHobbies.hobbies}`);
+// console.log(`name: ${mostHobbies.name} \n hobbies: ${mostHobbies.hobbies}`);
 
 //? - Ortalaması ən böyük olan tələbənin ad və soyadını çapa verin
 
@@ -304,7 +307,6 @@ let students = [
 //? - boyfriend-i olan tələbələrin adlarını və username-lərini çapa verin
 
 // const haveBoyfriendGirlfriend=students.filter(student=>student.boyfriendGirlfriend)
-
 // haveBoyfriendGirlfriend.forEach(student=>{
 //     console.log(`Usename: ${student.loginDetail.username} name: ${student.name}`)
 // })
@@ -341,15 +343,14 @@ let students = [
 
 //? - Qızların arasında id-si 3 olan müəllimlərin adını deyin
 
-// const findId = students.filter(
-//   (student) => student.id == 3 && student.gender == "girl"
-// );
-
-// findId.forEach((student) => {
-//   student.teacher.forEach((teacher) => {
-//     console.log(`teacher: ${teacher.name}`);
-//   });
-// });
+// let result=students.filter(student=>student.gender=="girl")
+// result.forEach(student=>{
+//   student.teacher.forEach(tescher=>{
+//     if(tescher.id==3){
+//       console.log(tescher.name);
+//     }
+//   })
+// })
 
 //? - Tələbələrin adlarını və müəllim saylarını çapa verin
 
@@ -360,11 +361,10 @@ let students = [
 
 //? - Tələbələrin adlarını username və şifrələrindən ibarət yeni array yaradın [{name:qurban,username:qurban123,password:qqq123}]
 
-// result= students.reduce((acc, elem)=>{
+// let result= students.reduce((acc, elem)=>{
 //     acc.push(` name: ${elem.name}, username: ${elem.loginDetail.username}`)
 //     return acc
 // },[])
-// .flat()
 // console.log(result);
 
 //? - Müəllimlərin adlarından sonra müəllim sözünü əlavə edin. String metod istifadə edin
@@ -395,19 +395,17 @@ let students = [
 
 //? - Bütün tələbələrin yaşlarının toplamı nə qədərdir
 
-// let sumAges=0
-// students.forEach(student=>{
-//    sumAges+=student.age
-// })
+// const sumAges=students.reduce((sum , student)=>{
+//    return sum + student.age
+// },0)
 // console.log(sumAges);
 
 //? - Bütün tələbələrin cəmi bal ortalaması nə qədərdir
 
-// let sumAvgPoint=0
-// students.map(student=>{
-//   sumAvgPoint+= student.avgPoint
-// })
-// console.log(sumAvgPoint);
+// const sumAverage=students.reduce((sum , student)=>{
+//   return sum + student.avgPoint
+// },0)
+// console.log(sumAverage);
 
 //? - "book" həvəsini olan tələbələrin siyahısını çap edin
 
@@ -520,6 +518,12 @@ let students = [
 // console.log(isEqual([1, 2, 3, 4], [1, 2, 3, 4, false]))
 // console.log(isEqual([1, 2, 3, 4, false], [1, 2, 3, 4, false]))
 
+//? 7. Bir string ve bir char qebul eden bir function yazın.Əgər daxil olunmuş char string-də varsa char-ın yerləşdiyi indekslərin cəmini yoxdursa -1 return etsin. Məsələn salam və 'a' daxil olunarsa output 1+3=4 olmalıdır.
+
+//? 8. Bir function yazın parametr olaraq bir array, bir index və bir string qəbul edir. Və daxil olunmuş indeksə əsasən göndərilmiş string-i həmin array-ə əlavə edib return etsin. Məsələn arqument olaraq - ['a','salam','b','world'], 3, "dev" göndərilərsə o zaman dev string-ini 3cu indekse elave etmelidir, eger gonderilmish indeks array-in uzunlugundan boyuk olarsa o zaman hemin string array-in en sonuna elave edilsin.  
+
+//? 9. Bir function yazın, parametr olaraq 2 array qebul edir və bir char qebul edir.gonderilmish char-a esasen hemin iki array-i ve elementlerini birleshdirib bir string olaraq return etmelidir. Meselen -> [1,2] [3,4] '*' gonderilerse output -> 1*2*3*4 string-i olmalidir.
+
 //? 10 studentlərin ortalama score'nu yeni bir arrayda yığın
 
 // const calculateAverage = (scores) =>
@@ -596,8 +600,6 @@ let students = [
 
 // console.log(sumOfPrices);
 
-
-
 //? 13 countries arrayində a ilə başlayıb a ilə bitən ölkələri tapın
 
 // let countries = ["Azerbaijan", "Albania", "Germany", "America", "Russian"];
@@ -610,7 +612,7 @@ let students = [
 //? 15 daxil edilmiş cümlə daxilində boşluqların sayini tapan function yazin
 
 // const findSpaceCounts=(str)=>{
-//   const spaces=str.split(' ').length-1 
+//   const spaces=str.split(' ').length-1
 //   return spaces
 // }
 // console.log(findSpaceCounts("sdhfshkdjf sdfjksdf dfkjsdf"));
