@@ -256,9 +256,9 @@ let students = [
 
 //? - Bütün elementləri konsola yazın
 
-//   let result=students.filter((allelems)=>{
-//     console.log(allelems);
-//   })
+  // let result=students.filter((allelems)=>{
+  //   console.log(allelems);
+  // })
 
 //? - Bütün tələbələrin adlarını konsola yazın - ad: Qurban
 
