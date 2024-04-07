@@ -655,15 +655,15 @@ let students = [
 
 //? 15 daxil edilmiş cümlə daxilində boşluqların sayini tapan function yazin
 
-const findSpaceCounts = (str) => {
-  let spaces = 0;
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === ' ') {
-      spaces++;
-    }
-  }
-  return spaces;
-};
+// const findSpaceCounts = (str) => {
+//   let spaces = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] === ' ') {
+//       spaces++;
+//     }
+//   }
+//   return spaces;
+// };
 
-console.log(findSpaceCounts("sdhfshkdjf sdfjksdf dfkjsdf"));
+// console.log(findSpaceCounts("sdhfshkdjf sdfjksdf dfkjsdf"));
 

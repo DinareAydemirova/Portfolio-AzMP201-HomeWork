@@ -160,8 +160,8 @@
 
 // for (let i = 0; i < arr.length; i++) {
 //     if (typeof arr[i] === 'boolean') {
-//         let left = (i > 0) && arr[i - 1]
-//         let right = (i < arr.length - 1) && arr[i + 1]
+//         let left = arr[i - 1]
+//         let right = arr[i + 1]
 //         console.log( left, right);
 //         break;
 //     }
@@ -202,7 +202,7 @@
 //     if (typeof arr[i] === 'string') {
 //         let uppercaseCount = 0;
 //         for (let j = 0; j < arr[i].length; j++) {
-//             if (arr[i][j] === arr[i][j].toUpperCase() && arr[i][j] !== arr[i][j].toLowerCase()) {
+//             if (arr[i][j] === arr[i][j].toUpperCase()) {
 //                 uppercaseCount++;
 //             }
 //         }
