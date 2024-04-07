@@ -470,6 +470,7 @@ let countries=[
 
 ]   
 
+//? 3. Sadəcə ölkə adlarının olduğu array-ı return edən funksiya yazın
 
 // function onlyNams(countries){
 //     countries.forEach(country=>{
@@ -513,6 +514,8 @@ let countries=[
 
 //? 9. Array-in bütün elementlərini kvadrata yüksəldib yeni array qaytaran proqram yazın.
 
+
+// //1
 // const array = [1, 2, 3, 4, 5];
 // function squareArray(arr) {
 //     const squaredArray = [];
@@ -524,6 +527,13 @@ let countries=[
 // }
 
 // console.log(squareArray(array));
+
+// //2
+
+// result=array.reduce((square, elem)=>{
+//     return square.concat(elem**2)
+// },[])
+// console.log(result);
 
 
 
