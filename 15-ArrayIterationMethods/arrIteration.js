@@ -338,6 +338,18 @@ let students = [
 
 //? - Şifrəsində rəqəm olmayan tələbələri tapın
 
+// let studentsWithoutDigits = students.filter(student => {
+//   for (let char of student.loginDetail.password) {
+//       if (char >= '0' && char <= '9') {
+//           return false; 
+//       }
+//   }
+//   return true; 
+// });
+
+// console.log(studentsWithoutDigits);
+
+
 //? - Qızların arasında id-si 3 olan müəllimlərin adını deyin
 
 // let result=students.filter(student=>student.gender=="girl")
@@ -653,6 +665,19 @@ let students = [
 
 // ? 14 Verilmiş ədədin bölənlərinin sayını tapan funksiya tərtib edin.
 
+// let result = (num) => {
+//   let divisors = [];
+//   for (let i = 1; i <= num; i++) {
+//     if (num / i === Math.floor(num / i)) {
+//       divisors.push(i);
+//     }
+//   }
+
+//   return divisors;
+// };
+
+// console.log(result(12));
+
 //? 15 daxil edilmiş cümlə daxilində boşluqların sayini tapan function yazin
 
 // const findSpaceCounts = (str) => {
@@ -666,4 +691,3 @@ let students = [
 // };
 
 // console.log(findSpaceCounts("sdhfshkdjf sdfjksdf dfkjsdf"));
-

@@ -135,24 +135,24 @@
 
 //?  9. Verilmiş array-də min və max elementi nəzərə almadan yerdə qalan bütün elementlərin cəmini tapın.
 
-// let arr=[3,8,2,5,4,10,7,6]
-// let min=arr[0]
-// let max=arr[0]
-// sum=0
-// for(let i = 0; i<arr.length; i++){
-//     if(min>arr[i]){
-//         min=arr[i]
-//     }else if(max<arr[i]){
-//         max=arr[i]
-//     }
-// }
+let arr=[3,8,2,5,4,10,7,6]
+let min=arr[0]
+let max=arr[0]
+sum=0
+for(let i = 0; i<arr.length; i++){
+    if(min>arr[i]){
+        min=arr[i]
+    }else if(max<arr[i]){
+        max=arr[i]
+    }
+}
 
-// for(let i= 0;i<arr.length;i++){
-//     if(arr[i]!=max && arr[i]!=min){
-//         sum+=arr[i]
-//     }
-// }
-// console.log(sum)
+for(let i= 0;i<arr.length;i++){
+    if(arr[i]!=max && arr[i]!=min){
+        sum+=arr[i]
+    }
+}
+console.log(sum)
 
 //?  10. Verilmiş array-in bool tipinde olan elementin qonsu elementlerini ekrana cixaran proqram yazin
 
