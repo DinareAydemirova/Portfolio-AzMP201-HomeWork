@@ -254,9 +254,6 @@ let students = [
   },
 ];
 
-
-
-
 //? - Bütün elementləri konsola yazın
 
 // let result=students.filter((allelems)=>{
@@ -504,6 +501,13 @@ let students = [
 
 //? 5. Write a method that returns a duplicate-free array.
 
+// let nums= [1, 2, 1, 2, 3]
+// let clearDuplicate=nums.reduce((acc, elem)=>{
+//   !acc.includes(elem) ? acc.push(elem):null
+//   return acc
+// },[])
+// console.log(clearDuplicate);
+
 //? 6. Write a function that compares two arrays and returns true if they are identical.
 
 // const isEqual=(array1 , arry2)=>{
@@ -520,20 +524,42 @@ let students = [
 
 //? 7. Bir string ve bir char qebul eden bir function yazın.Əgər daxil olunmuş char string-də varsa char-ın yerləşdiyi indekslərin cəmini yoxdursa -1 return etsin. Məsələn salam və 'a' daxil olunarsa output 1+3=4 olmalıdır.
 
-//? 8. Bir function yazın parametr olaraq bir array, bir index və bir string qəbul edir. Və daxil olunmuş indeksə əsasən göndərilmiş string-i həmin array-ə əlavə edib return etsin. Məsələn arqument olaraq - ['a','salam','b','world'], 3, "dev" göndərilərsə o zaman dev string-ini 3cu indekse elave etmelidir, eger gonderilmish indeks array-in uzunlugundan boyuk olarsa o zaman hemin string array-in en sonuna elave edilsin.  
+// let cheeckLetter=(word, letter)=>{
+//   sum=0
+//   if(word.includes(letter)){
+//     for (let i = 0; i < word.length; i++) {
+//       if(word[i]===letter){
+//         sum+=i
+
+//       }
+
+//     }
+//     console.log(sum);
+//   }else{
+//     console.log(-1);
+//   }
+// }
+// cheeckLetter("salam","a")
+
+//? 8. Bir function yazın parametr olaraq bir array, bir index və bir string qəbul edir. Və daxil olunmuş indeksə əsasən göndərilmiş string-i həmin array-ə əlavə edib return etsin. Məsələn arqument olaraq - ['a','salam','b','world'], 3, "dev" göndərilərsə o zaman dev string-ini 3cu indekse elave etmelidir, eger gonderilmish indeks array-in uzunlugundan boyuk olarsa o zaman hemin string array-in en sonuna elave edilsin.
+
+// let newarr = (arr, i, str) => {
+//   arr.splice(i, 0, str);
+//   return arr;
+// };
+
+// console.log(newarr(['a','salam','b','world'], 3, "dev"));
 
 //? 9. Bir function yazın, parametr olaraq 2 array qebul edir və bir char qebul edir.gonderilmish char-a esasen hemin iki array-i ve elementlerini birleshdirib bir string olaraq return etmelidir. Meselen -> [1,2] [3,4] '*' gonderilerse output -> 1*2*3*4 string-i olmalidir.
 
+// let func=(arr1, arr2, char)=>{
+//   let arr3=arr1.concat(arr2)
+//   console.log(arr3.join(char));
+// }
+
+// func([1,2],[3,5],"*")
+
 //? 10 studentlərin ortalama score'nu yeni bir arrayda yığın
-
-// const calculateAverage = (scores) =>
-//   scores.reduce((total, score) => total + score, 0) / scores.length;
-
-// const findAverageScores = (students) =>
-//   students.map((student) => ({
-//     name: student.name,
-//     averageScore: calculateAverage(student.scores),
-//   }));
 
 // const student = [
 //   { name: "Ali", scores: [90, 85, 92] },
@@ -541,7 +567,16 @@ let students = [
 //   { name: "Mammal", scores: [75, 80, 85] },
 //   { name: "Camil", scores: [90, 95, 85] },
 // ];
-// console.log(findAverageScores(student));
+
+// result=student.reduce((acc, elem)=>{
+//   let averagepoint= elem.scores.reduce((average, elemant)=>{
+//     return average+elemant
+//   },0)/elem.scores.length
+//   acc.push(averagepoint)
+//   return acc
+// },[])
+
+// console.log(result);
 
 //? 11 webTechs arrayında olan elementlərin uzunluğu 4'dən böyük olanları yeni bir arraya yığın
 
@@ -556,8 +591,14 @@ let students = [
 //   "JS",
 //   "MongDB",
 // ];
-//  newArr= webTechs.filter(elem=>elem.length>4)
-// console.log(newArr);
+
+// let result = webTechs.reduce((acc, elem) => {
+//   if (elem.length > 4) {
+//     acc.push(elem);
+//   }
+//   return acc;
+// }, []);
+// console.log(result);
 
 //? 12 roduct arrayindəki producların qiymətləri cəmini və ortalamasını tapın\
 
@@ -594,18 +635,21 @@ let students = [
 //   },
 // ];
 
-// const sumOfPrices =
-//   products.reduce((total, product) => total + product.price, 0) /
-//   products.length;
-
-// console.log(sumOfPrices);
+// result=products.reduce((sum, elem)=>{
+//   return sum+= elem.price
+// },0) / products.length
+// console.log(result);
 
 //? 13 countries arrayində a ilə başlayıb a ilə bitən ölkələri tapın
 
 // let countries = ["Azerbaijan", "Albania", "Germany", "America", "Russian"];
 
-// const startEndA=countries.filter(country=> country.charAt(0)==="A" && country.charAt(country.length-1)==="a")
-// console.log(startEndA);
+// const startEndA = countries.filter(country=>
+//     country.toLocaleLowerCase().startsWith("a") &&
+//     country.toLocaleLowerCase().endsWith("a")
+// )
+
+//  console.log(startEndA);
 
 // ? 14 Verilmiş ədədin bölənlərinin sayını tapan funksiya tərtib edin.
 
