@@ -504,6 +504,8 @@ let students = [
 // }
 // console.log(swamp("The Quick Brown Fox"));
 
+
+
 //? 4. Write a method that clears the array from all unnecessary elements, like false, undefined, empty strings, zero, null.
 
 // const clear=(array)=>{
