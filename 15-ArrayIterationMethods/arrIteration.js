@@ -442,9 +442,11 @@ let students = [
 
 //? - Bütün tələbələrin ad və soyadlarının uzunluqlarının cəmi hansıdır
 
-// const sumOfLengthNameSurname=students.map(student=>{
-//   console.log(student.name.length+student.surname.length);
-// })
+// const sumOfLengthNameSurname=students.reduce((sum, elem)=>{
+//   sum+=elem.name.length+elem.surname.length
+//   return sum
+// },0)
+// console.log(sumOfLengthNameSurname);
 
 //? - Tələbələrin adlarını tərsinə çevirin.
 
