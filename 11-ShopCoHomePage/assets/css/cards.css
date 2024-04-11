@@ -1,0 +1,327 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: satoshi;
+}
+
+.container {
+  max-width: 86%;
+  margin: 0 auto;
+}
+
+header .topnav {
+  height: 38px;
+  color: #ffffff;
+  background-color: black;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+header .topnav .signup {
+  display: flex;
+  align-items: center;
+}
+header .topnav .signup a {
+  color: white;
+}
+header .topnav .signup i {
+  display: flex;
+  padding: 200px;
+}
+
+.bottomnav {
+  height: 96px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.186);
+}
+.bottomnav .shopco {
+  display: flex;
+  align-items: center;
+}
+.bottomnav .shopco .fa-bars {
+  display: none;
+}
+.bottomnav .shopco h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+.bottomnav .shopco h1 a {
+  text-decoration: none;
+  color: black;
+}
+.bottomnav .shopco ul {
+  list-style: none;
+  display: flex;
+  padding: 0 40px;
+  gap: 24px;
+  font-size: 16px;
+}
+.bottomnav .shopco ul a {
+  color: black;
+  text-decoration: none;
+}
+.bottomnav .shopco .bar {
+  width: 577px;
+  height: 48px;
+  position: relative;
+}
+.bottomnav .shopco .bar input {
+  width: 100%;
+  height: 100%;
+  border-radius: 62px;
+  border: none;
+  background-color: #f0f0f0;
+}
+.bottomnav .shopco .bar ::placeholder {
+  padding-left: 52px;
+}
+.bottomnav .shopco .bar .fa-magnifying-glass {
+  position: absolute;
+  z-index: 2;
+  top: 35%;
+  right: 94%;
+}
+.bottomnav .shopco .righticons {
+  display: flex;
+  gap: 5%;
+  padding-left: 15px;
+}
+
+.showPage p {
+  margin: 24px 0;
+}
+
+.cards {
+  font-weight: 700;
+  font-size: 30px;
+  margin: 24px 0;
+}
+
+@media only screen and (max-width: 992px) {
+  header .topnav i {
+    display: none !important;
+  }
+  header .bottomnav ul li {
+    display: none;
+  }
+  header .bottomnav input {
+    display: none;
+  }
+  header .bottomnav .fa-bars {
+    display: block !important;
+    padding-right: 5%;
+  }
+  header .bottomnav .fa-magnifying-glass {
+    display: flex;
+    left: 100%;
+  }
+}
+.yourCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.yourCards .leftSide {
+  border: 1px solid rgba(128, 128, 128, 0.34);
+  border-radius: 20px;
+}
+.yourCards .leftSide .card {
+  display: flex;
+  gap: 16px;
+  margin: 24px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.327);
+}
+.yourCards .leftSide .card .picInfo {
+  display: flex;
+}
+.yourCards .leftSide .card .action {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  margin-left: 100px;
+}
+.yourCards .leftSide .card .action .delete {
+  margin-left: 100px;
+}
+.yourCards .leftSide .card h3 {
+  font-size: 20px;
+}
+.yourCards .leftSide .card p {
+  font-size: 14px;
+}
+.yourCards .leftSide .card h2 {
+  font-size: 24px;
+}
+.yourCards .rightSide {
+  border: 1px solid rgba(128, 128, 128, 0.303);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 24px;
+}
+.yourCards .rightSide h2 {
+  font-size: 24px;
+}
+.yourCards .rightSide div {
+  display: flex;
+  justify-content: space-between;
+}
+.yourCards .rightSide div p {
+  font-size: 20px;
+}
+.yourCards .rightSide .total {
+  padding-top: 20px;
+  border-top: 1px solid rgba(128, 128, 128, 0.253);
+}
+.yourCards .rightSide .promoCode {
+  position: relative;
+}
+.yourCards .rightSide .promoCode img {
+  position: absolute;
+  z-index: 3;
+  bottom: 23%;
+  right: 93%;
+}
+.yourCards .rightSide .promoCode input {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 62px;
+}
+.yourCards .rightSide .promoCode ::placeholder {
+  padding-left: 10%;
+}
+.yourCards .rightSide .promoCode button {
+  height: 48px;
+  width: 26%;
+  background-color: black;
+  color: white;
+  border-radius: 62px;
+}
+.yourCards .rightSide .checkout button {
+  width: 100%;
+  height: 48px;
+  border-radius: 62px;
+  background-color: black;
+  color: white;
+}
+
+@media only screen and (max-width: 992px) {
+  .yourCards {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .yourCards .card .action {
+    display: none !important;
+  }
+}
+.offers {
+  display: flex;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  padding: 60px;
+  gap: 17%;
+}
+.offers h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.offers .submit {
+  width: 349px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 15px;
+}
+.offers .submit i {
+  position: absolute;
+  z-index: 3;
+  color: black;
+  top: 16%;
+  left: 5%;
+}
+.offers .submit input {
+  border-radius: 62px;
+  height: 48px;
+  background-color: #ffffff;
+}
+.offers .submit ::placeholder {
+  padding-left: 15%;
+}
+.offers .submit button {
+  height: 48px;
+  border-radius: 62px;
+  background-color: #FFFFFF;
+}
+
+@media only screen and (max-width: 992px) {
+  .offers {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+footer {
+  padding-top: 140px;
+  background-color: #F0F0F0;
+}
+footer .footer {
+  display: flex;
+  gap: 113px;
+  border-bottom: 1px solid gray;
+}
+footer .footer h1 {
+  margin-bottom: 26px;
+}
+footer .footer .columns ul {
+  list-style: none;
+}
+footer .footer .columns ul li {
+  margin: 10px 0;
+}
+footer .footer .columns .social {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+footer .footer .columns .social i {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer .columns .social .fa-facebook-f {
+  background-color: black;
+  color: white;
+}
+footer .footer .columns h4 {
+  margin-bottom: 26px;
+}
+footer .bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+@media only screen and (max-width: 992px) {
+  footer .footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer .bottom {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}/*# sourceMappingURL=cards.css.map */
