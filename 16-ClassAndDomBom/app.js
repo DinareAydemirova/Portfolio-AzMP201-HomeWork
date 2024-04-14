@@ -57,13 +57,13 @@ const user1 = new User('John', 'Doe', 25, 'Male', 'US', 'johndoe', 'john@example
 const user2 = new User('Jane', 'Doe', 30, 'Female', 'UK', 'janedoe', 'jane@example.com', true, 'password456', 'Another bio');
 const user3 = new User('Alice', 'Smith', 35, 'Female', 'Canada', 'alice', 'alice@example.com', false, 'password789', 'Yet another bio');
 
-// Create an array of users
+
 const users = [user1, user2, user3];
 
-// Test methods
+
 console.log(users);
 
-// Change password example
+
 console.log(user1.changePassword('password123', 'newPassword')); 
 console.log(user1.changePassword('wrongPassword', 'newPassword')); 
 console.log(user1.changeEmail(users, 'john@example.com'));
