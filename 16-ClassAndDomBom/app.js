@@ -55,21 +55,20 @@ class User extends Person {
     }
   }
   sortUsersByUsername(users) {
-    return users.slice().sort()
+    
 
   }
   filterByBirthYear(users, year) {
-    return users.filter(user => user.getBirthYear() > year);
+   
   }
-  Login() {}
-  LogOut() {}
-  CreateUser() {}
-  DeleteUser() {}
+  Login(users, username, password) {}
+  LogOut(users, username) {}
+  CreateUser(users, newUser) {}
+  DeleteUser(users, username) {}
 }
 
 const user1 = new User("Dinara","Aydamirova",19,"Female","Aze","dinara_ayd","dinaraaydamirova@gmail.com",false,"77777da","yflkfjytkyfluyfy");
-const user2 = new User("Dinara","Aydamirova",20,"Female","Aze", "dinara_ayd","dinaraaydamirova@gmail.com", false,"77777da","yflkfjytkyfluyfy"
-);
+const user2 = new User("Dinara","Aydamirova",25,"Female","Aze", "dinara_ayd","dinaraaydamirova@gmail.com", false,"77777da","yflkfjytkyfluyfy");
 
 const users = [user1, user2];
 
@@ -80,5 +79,3 @@ console.log(user1.changePassword("77777da", "55555da"));
 console.log(user1.changeEmail(users, "dinaraaydamirova@gmail.com"));
 console.log(user1.changeEmail(users, "dinara@gmail.com"));
 
-
-console.log(User.filterByBirthYear(users, 1990));
