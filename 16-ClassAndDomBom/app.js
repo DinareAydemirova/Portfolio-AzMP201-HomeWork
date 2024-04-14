@@ -18,18 +18,7 @@ class Person {
 }
 
 class User extends Person {
-  constructor(
-    name,
-    surname,
-    age,
-    gender,
-    nationality,
-    username,
-    email,
-    isAdmin,
-    password,
-    bio = ""
-  ) {
+  constructor(name,surname,age,gender,nationality,username,email, isAdmin,password,bio = "") {
     super(name, surname, age, gender, nationality);
     this.username = username;
     this.email = email;
@@ -65,11 +54,12 @@ class User extends Person {
       return "email changed successfully";
     }
   }
-  sortUsersByUsername() {
+  sortUsersByUsername(users) {
+    return users.slice().sort()
 
   }
-  filterByBirthYear() {
-    
+  filterByBirthYear(users, year) {
+    return users.filter(user => user.getBirthYear() > year);
   }
   Login() {}
   LogOut() {}
@@ -77,29 +67,8 @@ class User extends Person {
   DeleteUser() {}
 }
 
-const user1 = new User(
-  "Dinara",
-  "Aydamirova",
-  19,
-  "Female",
-  "Aze",
-  "dinara_ayd",
-  "dinaraaydamirova@gmail.com",
-  false,
-  "77777da",
-  "yflkfjytkyfluyfy"
-);
-const user2 = new User(
-  "Dinara",
-  "Aydamirova",
-  19,
-  "Female",
-  "Aze",
-  "dinara_ayd",
-  "dinaraaydamirova@gmail.com",
-  false,
-  "77777da",
-  "yflkfjytkyfluyfy"
+const user1 = new User("Dinara","Aydamirova",19,"Female","Aze","dinara_ayd","dinaraaydamirova@gmail.com",false,"77777da","yflkfjytkyfluyfy");
+const user2 = new User("Dinara","Aydamirova",20,"Female","Aze", "dinara_ayd","dinaraaydamirova@gmail.com", false,"77777da","yflkfjytkyfluyfy"
 );
 
 const users = [user1, user2];
@@ -110,3 +79,6 @@ console.log(user1.changePassword("55555da", "123456da"));
 console.log(user1.changePassword("77777da", "55555da"));
 console.log(user1.changeEmail(users, "dinaraaydamirova@gmail.com"));
 console.log(user1.changeEmail(users, "dinara@gmail.com"));
+
+
+console.log(User.filterByBirthYear(users, 1990));
