@@ -3,9 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .container {
   max-width: 70%;
   margin: 0 auto;
+
   .topText {
     display: flex;
     flex-direction: column;
@@ -19,12 +21,14 @@
       margin: 20px;
       color: rgb(254, 114, 53);
     }
+
     h1 {
       font-size: 3.157em;
       color: rgb(36, 46, 66);
       font-family: Archivo;
       margin-bottom: 20px;
     }
+
     p {
       font-family: Muli;
       font-size: 1.333em;
@@ -33,14 +37,17 @@
       margin-bottom: 50px;
     }
   }
+
   .bottomCards {
     display: flex;
     justify-content: center;
     gap: 50px;
+
     img {
       border: 1px solid rgba(128, 128, 128, 0.326);
       margin-bottom: 20px;
     }
+
     h4 {
       font-weight: 500;
       font-family: Archivo;
@@ -48,57 +55,80 @@
       color: rgb(36, 46, 66);
       margin-bottom: 20px;
     }
+
     p {
       font-family: Muli;
       font-weight: 400;
-      font-size: 1em;
+      font-size: 16px;
       line-height: 1.6;
       color: rgb(94, 121, 151);
       margin-bottom: 20px;
     }
+
     h6 {
       font-family: Archivo;
       font-weight: 400;
       font-size: 0.9em;
-      line-height: 1.6;
       color: rgb(254, 114, 53);
       letter-spacing: 3px;
       margin-bottom: 20px;
-      
     }
-    .accordion{
-        font-family: Muli;
-        font-size: 1em;
-        display: flex;
-        flex-direction: column;
-        font-weight: 600;
-    }
-    span {
+
+    .pages {
+      font-family: Muli;
+      font-size: 1em;
+      display: flex;
+      flex-direction: column;
+      font-weight: 600;
+      .panel {
+        display: none;
+        p {
+          padding: 20px;
+        }
+      }
+      button {
         padding: 15px 10px;
-        border-bottom:1px solid rgba(0, 0, 0, 0.156);
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.16);
         display: flex;
         justify-content: space-between;
-      i{
-        width: 18px;
-        height: 18px;
-        background-color: rgb(254, 167, 53);
+        background-color: white;
+        transition: 0.5s;
+
+        i {
+          width: 20px;
+          height: 20px;
+          background-color: rgb(254, 167, 53);
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          margin-top: 5px;
+        }
+      }
+
+      button:hover {
+        background-color: rgb(0, 119, 255);
         color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50px;
+        i {
+          background-color: white;
+          color: rgb(0, 119, 255);
+        }
       }
     }
   }
-  .button{
+
+  .button {
     display: flex;
     justify-content: center;
     margin: 40px;
   }
 }
+
 @media only screen and (max-width: 902px) {
-    .bottomCards{
-        display: flex;
-        flex-wrap: wrap;
-    }
+  .bottomCards {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
