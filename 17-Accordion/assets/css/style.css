@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -118,4 +119,82 @@
     display: flex;
     flex-wrap: wrap;
   }
+}
+.todo {
+  background-color: rgba(69, 109, 203, 0.518);
+  display: flex;
+  align-items: center;
+}
+.todo .todo-app {
+  background-color: white;
+  padding: 15px;
+  border-radius: 20px;
+  margin: 30px;
+}
+.todo .todo-app h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.todo .todo-app form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.todo .todo-app input {
+  width: 70%;
+  padding: 15px;
+  border: 4px solid rgba(69, 109, 203, 0.518);
+  border-radius: 15px;
+}
+.todo .todo-app .btn {
+  background-color: rgba(69, 109, 203, 0.518);
+  border: none;
+  color: white;
+  border-radius: 15px;
+  padding: 20px 30px;
+}
+.todo .todo-app .btn:hover {
+  background-color: rgba(69, 109, 203, 0.682);
+}
+.todo .todo-app li {
+  list-style-type: none;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 6px 10px 30px;
+}
+.todo .todo-app li:before {
+  content: "☐";
+  font-size: 20px;
+  position: absolute;
+  left: -1px;
+}
+.todo .todo-app li.checked {
+  text-decoration: line-through;
+  color: black;
+}
+.todo .todo-app li span {
+  position: absolute;
+  top: 0;
+  right: 0%;
+  color: red;
+  font-size: 1.5rem;
+}
+.todo .todo-app ul li.checked::before {
+  content: "☑";
+  color: rgba(69, 109, 203, 0.682);
+}
+.todo .todo-app .delete {
+  background-color: rgba(69, 109, 203, 0.682);
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 15px;
+}
+.todo .todo-app .update-task {
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  left: 95%;
 }/*# sourceMappingURL=style.css.map */
