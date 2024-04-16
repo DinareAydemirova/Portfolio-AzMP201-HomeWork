@@ -1,0 +1,92 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.todo {
+  display: flex;
+  background-image: linear-gradient(180deg, purple, aqua);
+}
+.todo ul {
+  list-style: none;
+}
+.todo .box {
+  background-color: white;
+  margin: 50px;
+  padding: 40px;
+  border-radius: 15px;
+}
+.todo .box .addTodoInp {
+  border: 1px solid rgba(0, 0, 0, 0.181);
+  height: 40px;
+  border-radius: 5px;
+}
+.todo .box ::placeholder {
+  padding-left: 15px;
+}
+.todo .box .add {
+  height: 40px;
+  border-radius: 5px;
+  background-image: linear-gradient(180deg, purple, aqua);
+  color: white;
+  border: none;
+  width: 60px;
+}
+.todo .box .todoItem {
+  border: 1px solid rgba(0, 0, 0, 0.207);
+  margin: 20px 0;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  position: relative;
+}
+.todo .box .todoItem .delete {
+  border: none;
+  background-color: white;
+  color: red;
+  position: absolute;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo .box .todoItem .edinBtn {
+  background-color: white;
+  color: green;
+  border: none;
+  position: absolute;
+  right: 35px;
+  top: 13px;
+}
+.todo .box p:before {
+  content: "☐";
+  margin-right: 10px;
+}
+.todo .box p.checked {
+  color: black;
+  text-decoration: line-through;
+}
+.todo .box div p.checked::before {
+  content: "☑";
+}
+.todo .box .deleteAll {
+  background-color: white;
+  color: red;
+  border: none;
+  padding: 5px;
+  margin-top: 10px;
+}
+.todo .box .a-z, .todo .box .z-a {
+  background-color: cornsilk;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px;
+}/*# sourceMappingURL=style.css.map */
