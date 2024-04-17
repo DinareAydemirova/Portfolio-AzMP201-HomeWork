@@ -21,6 +21,19 @@
     margin: 50px;
     padding: 40px;
     border-radius: 15px;
+    .searchTodo{
+      border: 1px solid rgba(0, 0, 0, 0.181);
+      height: 40px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+h3{
+  background: linear-gradient(180deg, purple, aqua);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
     .addTodoInp {
       border: 1px solid rgba(0, 0, 0, 0.181);
       height: 40px;
@@ -56,14 +69,21 @@
         justify-content: center;
         align-items: center;
       }
-      .edinBtn{
+      .edinBtn {
         background-color: white;
-      color:green;
-      border: none;
-      position: absolute;
-      right: 35px;
-top: 13px;
-    }
+        color: green;
+        border: none;
+        position: absolute;
+        right: 35px;
+        top: 13px;
+      }
+      .creationTime {
+        margin-top: 10px;
+        font-size: 6px;
+        margin-left: 5px;
+        color: grey;
+       
+      }
     }
     p:before {
       content: "☐";
@@ -83,12 +103,14 @@ top: 13px;
       padding: 5px;
       margin-top: 10px;
     }
-   .a-z, .z-a{
-    background-color: cornsilk;
-    border: none;
-    padding: 5px;
-    border-radius: 5px;
-    margin: 5px;
-   }
+     .a-z, .z-a{
+      background: linear-gradient(180deg, purple, aqua);
+      color: white;
+      border: none;
+      padding: 5px;
+      border-radius: 5px;
+      margin-top: 10px;
+     }
+   
   }
 }

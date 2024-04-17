@@ -23,6 +23,19 @@
   padding: 40px;
   border-radius: 15px;
 }
+.todo .box .searchTodo {
+  border: 1px solid rgba(0, 0, 0, 0.181);
+  height: 40px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.todo .box h3 {
+  background: linear-gradient(180deg, purple, aqua);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
 .todo .box .addTodoInp {
   border: 1px solid rgba(0, 0, 0, 0.181);
   height: 40px;
@@ -65,6 +78,12 @@
   right: 35px;
   top: 13px;
 }
+.todo .box .todoItem .creationTime {
+  margin-top: 10px;
+  font-size: 6px;
+  margin-left: 5px;
+  color: grey;
+}
 .todo .box p:before {
   content: "☐";
   margin-right: 10px;
@@ -84,9 +103,10 @@
   margin-top: 10px;
 }
 .todo .box .a-z, .todo .box .z-a {
-  background-color: cornsilk;
+  background: linear-gradient(180deg, purple, aqua);
+  color: white;
   border: none;
   padding: 5px;
   border-radius: 5px;
-  margin: 5px;
+  margin-top: 10px;
 }/*# sourceMappingURL=style.css.map */

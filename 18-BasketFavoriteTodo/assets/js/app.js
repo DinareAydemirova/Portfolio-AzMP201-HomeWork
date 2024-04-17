@@ -3,7 +3,9 @@ const addTodoInp = document.querySelector(".addTodoInp");
 const todoBox = document.querySelector(".todoBox");
 const box = document.querySelector(".box");
 let deleteAllButton = null; 
-let sortBy = null; 
+const searchTodoInput = document.querySelector(".searchTodo");
+const sortAZ= document.querySelector(".a-z")
+const sortZA= document.querySelector(".z-a")
 
 
 addTodo.addEventListener("submit", (e) => {
@@ -21,31 +23,30 @@ function createTode() {
     const todoText = document.createElement("p");
     const deletebtn = document.createElement("button");
     const editBtn= document.createElement("button")
-    
-    const sortZA=document.createElement("button")
+    const creationTime = document.createElement("span")
 
   
     todoItem.className = "todoItem";
     todoText.className = "todoText";
     deletebtn.className = "delete";
     editBtn.className="edinBtn"
-    sortAZ.className="a-z"
-    sortZA.className="z-a"
+    creationTime.className = "creationTime";
 
 
 
     todoText.innerText = addTodoInp.value;
     deletebtn.innerText = "✖";
     editBtn.innerHTML='<i class="fa-solid fa-pen-to-square"></i>'
-    sortAZ.innerText="A-Z"
-    sortZA.innerText="Z-A"
+    const currentTime = new Date();
+    const timeString = `${currentTime.toLocaleDateString()} ${currentTime.toLocaleTimeString()}`;
+    creationTime.innerText = `${timeString}`;
 
   
   
   
-    todoItem.append(todoText, deletebtn, editBtn);
+    todoItem.append(todoText, deletebtn, editBtn , creationTime);
     todoBox.appendChild(todoItem);
-    box.append(sortAZ ,sortZA)
+  
 
     addTodoInp.value = "";
   
@@ -83,7 +84,49 @@ function createTode() {
             todoText.textContent=newTodo
         }
     }
-    const sortAZ=document.createElement("button")
+    searchTodoInput.addEventListener("input", () => {
+      filterTodos();
+    });
+    
+    function filterTodos() {
+      const searchTerm = searchTodoInput.value.toLowerCase();
+      const todos = document.querySelectorAll(".todoItem");
+    
+      todos.forEach(todo => {
+        const todoText = todo.querySelector(".todoText").innerText.toLowerCase();
+        if (todoText.includes(searchTerm) || searchTerm === "") {
+          todo.style.display = "flex";
+        } else {
+          todo.style.display = "none";
+        }
+      });
+    }
+    sortAZ.addEventListener("click", ()=>{
+      sortTodos("asc");
+    })
+    sortZA.addEventListener("click", () => {
+      sortTodos("desc");
+    });
+
+    function sortTodos(order) {
+      const todos = document.querySelectorAll(".todoItem");
+      const sortedTodos = Array.from(todos).sort((a, b) => {
+        const textA = a.querySelector(".todoText").innerText.toLowerCase();
+        const textB = b.querySelector(".todoText").innerText.toLowerCase();
+        if (order === "asc") {
+          return textA.localeCompare(textB);
+        } else if (order === "desc") {
+          return textB.localeCompare(textA);
+        }
+      });
+    
+      todoBox.innerHTML = ""; 
+    
+      sortedTodos.forEach(todo => {
+        todoBox.appendChild(todo); 
+      });
+    }
+    
 
  }
 }
