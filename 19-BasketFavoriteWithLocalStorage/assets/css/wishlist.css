@@ -1,0 +1,90 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.navbar a i {
+  margin-right: 5px;
+}
+.card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.card img {
+  width: 50%;
+  border-radius: 5px;
+}
+
+.card-content {
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.addToBasket {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.addToFavorite {
+  background-color: #f44336;
+  color: white;
+}
+.homePage{
+  display: flex;
+  flex-wrap: wrap;
+}
+.counter{
+  position: absolute;
+  left: 110px;
+  top: 5px;
+  z-index: 3;
+  background-color: red;
+  border-radius: 50px;
+  font-size: 16px;
+  height: 18px;
+  width: 18px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
