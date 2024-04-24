@@ -1,0 +1,52 @@
+.mainBox {
+    background-color: #343c6d;
+    height: 300px;
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+img {
+    width: 80px;
+    background-color: white;
+    border-radius: 50px;
+    align-self: flex-start;
+}
+
+.text {
+    background-color: #343c6d;
+}
+
+.topSide {
+    display: flex;
+    gap: 50px;
+    background-color: #343c6d;
+    color: white;
+
+}
+
+.leftTexts {
+    background-color: #343c6d;
+    margin-bottom: 60px;
+}
+
+.social {
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 15px;
+    color: white;
+
+}
+
+.links {
+    color: white;
+    display: flex;
+    gap: 60px;
+    background-color: #343c6d;
+    padding: 20px 0;
+
+}

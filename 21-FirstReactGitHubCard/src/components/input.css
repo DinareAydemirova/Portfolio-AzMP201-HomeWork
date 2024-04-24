@@ -1,0 +1,25 @@
+.search{
+    display: flex;
+    margin-bottom: 15px;
+}
+input{
+    border: none;
+    background-color: #343c6d;
+    border-radius: 8px;
+    height: 40px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    padding: 10px;
+
+}
+button{
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #2e48f4;
+    padding: 10px 20px;
+    position: absolute;
+    right: 34%;
+    top: 7.3%;
+}
