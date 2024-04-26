@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.todoInp {
+    border: none;
+    padding: 15px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.AddToDo {
+    display: flex;
+    gap: 10px;
+}
+
+.addBtn {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: pink;
+}
+
+ul {
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+   
+}
+
+li {
+    border: 1px solid white;
+    padding: 10px;
+   display: flex;
+   justify-content: end;
+    border-radius: 10px;
+    
+}
+.delBtn{
+    padding: 10px;
+    border: none;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.463);
+    border-radius: 10px;
+    margin-left: 5px;
+
+}
+.editBtn{
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 0, 0.333);
+    margin-left:20px;
+
+}
+.saveInp{
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+}

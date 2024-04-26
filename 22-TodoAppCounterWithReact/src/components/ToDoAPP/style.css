@@ -1,0 +1,14 @@
+.todo{
+    margin-top: 20px;
+    background-image: linear-gradient(to bottom right, pink, aquamarine);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+h2{
+    padding: 10px;
+    color: white;
+}

@@ -1,0 +1,23 @@
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.counter{
+    
+    padding: 30px;
+    border: 1px solid black;
+    max-width: 400px;
+   
+}
+.incDec{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+}
+.CounterInput{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 5px;
+}
