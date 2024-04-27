@@ -1,0 +1,28 @@
+.sortMethods{
+    margin: 20px !important;
+    display: flex;
+    gap: 10px;
+margin: 10px 0;
+}
+.nameSort{
+    background-color: orange;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    margin-right: 3px;
+}
+
+.priceSort{
+    background-color: orange;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    margin-right: 3px;
+}
+
+.searchInp{
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-right: 3px;
+    
+}
