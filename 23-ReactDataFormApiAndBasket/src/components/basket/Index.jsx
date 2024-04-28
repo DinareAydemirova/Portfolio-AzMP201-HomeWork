@@ -1,10 +1,17 @@
 import { useState } from "react";
-import React  from "react";
+import React from "react";
 import style from "./style.module.css";
 
-const Basket = ({ basket , localbasket, setlocalbasket}) => {
+const Basket = ({ basket, localbasket, setlocalbasket }) => {
   let [count, setcount] = useState(1);
- 
+  
+  
+  const handleDeleteAll = () => {
+    setlocalbasket([]); 
+  
+  };
+  
+  
   return (
     <div className={style.box}>
       <h2>Basket</h2>
@@ -14,23 +21,37 @@ const Basket = ({ basket , localbasket, setlocalbasket}) => {
             <h6>Name: {item.name}</h6>
             <span>Unit Price: {item.unitPrice}</span>
             <div className={style.count}>
-              <button className={style.countProd} onClick={()=>{
-                if(count>0){
-                  setcount(--count)
-                }
-                if(count==0){
-                 
-                }
-              }}>-</button>
+              <button
+                className={style.countProd}
+                onClick={() => {
+                  if (count > 0) {
+                    setcount(--count);
+                  }
+                  if (count == 0) {
+                    handleDeleteAll()
+                  }
+                }}
+              >
+                -
+              </button>
               <p>{count}</p>
-              <button className={style.countProd} onClick={()=>{
-                setcount(++count)
-              }}>+</button>
+              <button
+                className={style.countProd}
+                onClick={() => {
+                  setcount(++count);
+                }}
+              >
+                +
+              </button>
             </div>
           </div>
         ))}
       </div>
-      <h4>Total: </h4>
+      <div className={style.bottom}>
+        <h4>Total: </h4>
+        <button className={style.del} onClick={()=>handleDeleteAll()}>Delete</button>
+
+      </div>
     </div>
   );
 };
