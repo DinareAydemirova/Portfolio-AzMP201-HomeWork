@@ -6,35 +6,56 @@ const Sort = ({ data, setData }) => {
 
   return (
     <div className={style.sortMethods}>
-
       <div>
-        <button className={style.nameSort} onClick={()=>{
-            const sortedData = [...data].sort((a, b) => a.name.localeCompare(b.name));
+        <button
+          className={style.nameSort}
+          onClick={() => {
+            const sortedData = [...data]
+              .filter((item) => item.name).sort((a, b) => a.name.localeCompare(b.name));
             setData(sortedData);
-        }}>A-Z</button>
+          }}
+        >
+          A-Z
+        </button>
 
-        <button className={style.nameSort} onClick={()=>{
-             const sortedData = [...data].sort((a, b) => b.name.localeCompare(a.name));
-             setData(sortedData);
-        }}>Z-A</button>
-
-
-
-
+        <button
+          className={style.nameSort}
+          onClick={() => {
+            const sortedData = [...data]
+              .filter((item) => item.name).sort((a, b) => b.name.localeCompare(a.name));
+            setData(sortedData);
+          }}
+        >
+          Z-A
+        </button>
       </div>
+
+
+      
       <div>
-        <button className={style.priceSort} onClick={()=>{
-             const sortedData = [...data].sort((a, b) => b.unitPrice - a.unitPrice);
-             setData(sortedData);
-        }}>High to low</button>
-        
-        <button className={style.priceSort} onClick={()=>{
-             const sortedData = [...data].sort((a, b) => a.unitPrice - b.unitPrice);
-             setData(sortedData);
-        }}>Low to high</button>
+        <button
+          className={style.priceSort}
+          onClick={() => {
+            const sortedData = [...data].sort(
+              (a, b) => b.unitPrice - a.unitPrice
+            );
+            setData(sortedData);
+          }}
+        >
+          High to low
+        </button>
 
-
-
+        <button
+          className={style.priceSort}
+          onClick={() => {
+            const sortedData = [...data].sort(
+              (a, b) => a.unitPrice - b.unitPrice
+            );
+            setData(sortedData);
+          }}
+        >
+          Low to high
+        </button>
       </div>
       <div>
         <input
@@ -42,16 +63,21 @@ const Sort = ({ data, setData }) => {
           placeholder="Search by name"
           className={style.searchInp}
           value={search}
-          onChange={(e)=>{
+          onChange={(e) => {
             setSearch(e.target.value);
           }}
         />
-        <button className={style.priceSort} onClick={()=>{
-             const filteredData = data.filter((item) =>
-             item.name.toLowerCase().includes(search.toLowerCase())
-           );
-           setData(filteredData);
-        }}>Search</button>
+        <button
+          className={style.priceSort}
+          onClick={() => {
+            const filteredData = data.filter((item) =>
+              item.name?.toLowerCase().includes(search?.toLowerCase())
+            );
+            setData(filteredData);
+          }}
+        >
+          Search
+        </button>
       </div>
     </div>
   );
