@@ -1,7 +1,10 @@
-import React from "react";
+import { useState } from "react";
+import React  from "react";
 import style from "./style.module.css";
 
 const Basket = ({ basket }) => {
+  let [count, setcount] = useState(1);
+
   return (
     <div className={style.box}>
       <h2>Basket</h2>
@@ -11,9 +14,18 @@ const Basket = ({ basket }) => {
             <h6>Name: {item.name}</h6>
             <span>Unit Price: {item.unitPrice}</span>
             <div className={style.count}>
-              <button className={style.countProd}>-</button>
-              <p>0</p>
-              <button className={style.countProd}>+</button>
+              <button className={style.countProd} onClick={()=>{
+                if(count>0){
+                  setcount(--count)
+                }
+                if(count==0){
+                 
+                }
+              }}>-</button>
+              <p>{count}</p>
+              <button className={style.countProd} onClick={()=>{
+                setcount(++count)
+              }}>+</button>
             </div>
           </div>
         ))}

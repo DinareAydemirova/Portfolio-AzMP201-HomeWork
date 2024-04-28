@@ -13,19 +13,27 @@
     width: 500px;
    
 }
-.count{
+.count {
     display: flex;
-     border: 1px solid black;
+    align-items: center; 
+    border: 1px solid black;
     width: max-content;
     background-color: rgb(247, 201, 143);
     border: none;
     padding: 0 15px;
     font-size: 20px;
-   border-radius: 8px;
-   margin-top: 10px;
-}
-.countProd{
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  .countProd {
     border: none;
-    background-color:  rgb(247, 201, 143);
-
-}
+    background-color: rgb(247, 201, 143);
+    padding: 5px 10px; 
+  }
+  
+  .count p {
+    margin: 0; 
+   
+  }
+  
