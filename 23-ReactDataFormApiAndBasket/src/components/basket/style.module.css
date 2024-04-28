@@ -1,0 +1,18 @@
+.box{
+    margin-left: 50px;
+}
+.basketInfo{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 30px;
+    background-color: antiquewhite ;
+    border-radius: 0 50px 0 50px;
+    margin: 20px;
+    border: none;
+}
+.count{
+    display: flex;
+    align-items: center;
+    
+}

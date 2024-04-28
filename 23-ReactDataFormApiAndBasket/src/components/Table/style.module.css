@@ -13,6 +13,8 @@
 }
 .del{
     background-color: rgba(255, 0, 0, 0.419);
+    border: none;
+
    
 }
 .del:hover{
@@ -21,7 +23,19 @@
 }
 .edit{
     background-color: rgba(0, 128, 0, 0.634);
+    border: none;
+
 }
 .edit:hover{
     background-color: rgb(0, 128, 0);
+}
+.basket{
+    background-color: rgba(0, 128, 128, 0.837);
+    border: none;
+}
+.basket:hover{
+    background-color: teal;
+}
+.body{
+    display: flex;
 }
