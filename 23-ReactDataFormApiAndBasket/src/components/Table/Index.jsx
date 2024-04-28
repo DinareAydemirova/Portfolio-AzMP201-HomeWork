@@ -10,6 +10,11 @@ import Basket from "../basket/Index";
 const DataTable = () => {
   const [data, setData] = useState([]);
   const [basket, setBasket] = useState([]);
+  const [localbasket, setlocalbasket] = useState(JSON.parse(localStorage.getItem("localbasket")) || [])
+  useEffect(() => {
+      localStorage.setItem('localbasket', JSON.stringify(localbasket))
+    }, [localbasket])
+
 
   useEffect(() => {
     axios("https://northwind.vercel.app/api/products").then((res) => {
@@ -92,7 +97,12 @@ const DataTable = () => {
                   <td className={style.datas}>
                     <Button
                       className={style.basket}
-                      onClick={() => addToBasket(elem.id)}
+                      onClick={() => {
+                        if(!localbasket.includes(elem)){
+                          setlocalbasket([...localbasket, elem])
+                          addToBasket(elem.id)
+                        }
+                      }}
                     >
                       Basket
                     </Button>
@@ -104,7 +114,7 @@ const DataTable = () => {
         </Table>
       </div>
       <div>
-        <Basket basket={basket} />
+        <Basket basket={basket} localbasket={localbasket} setlocalbasket={setlocalbasket}/>
       </div>
     </div>
   );

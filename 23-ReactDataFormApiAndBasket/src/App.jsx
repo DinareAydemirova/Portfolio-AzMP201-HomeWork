@@ -7,7 +7,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [count, setCount] = useState(0)
-
+  const [basket, setBasket] = useState(JSON.parse(localStorage.getItem("basket")) || [])
+  // useEffect(() => {
+  //     localStorage.setItem('basket', JSON.stringify(basket))
+  //   }, [basket])
   return (
     <>
     <DataForm/>

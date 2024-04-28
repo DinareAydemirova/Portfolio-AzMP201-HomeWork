@@ -2,14 +2,14 @@ import { useState } from "react";
 import React  from "react";
 import style from "./style.module.css";
 
-const Basket = ({ basket }) => {
+const Basket = ({ basket , localbasket, setlocalbasket}) => {
   let [count, setcount] = useState(1);
-
+ 
   return (
     <div className={style.box}>
       <h2>Basket</h2>
       <div>
-        {basket.map((item) => (
+        {localbasket.map((item) => (
           <div key={item.id} className={style.basketInfo}>
             <h6>Name: {item.name}</h6>
             <span>Unit Price: {item.unitPrice}</span>
