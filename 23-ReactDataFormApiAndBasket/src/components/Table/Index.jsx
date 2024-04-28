@@ -80,10 +80,7 @@ const DataTable = () => {
                       className={style.edit}
                       onClick={() => {
                         const newName = prompt("Edit name", elem.name);
-                        const newUnitPrice = prompt(
-                          "Edit unit price",
-                          elem.unitPrice
-                        );
+                        const newUnitPrice = prompt("Edit unit price",elem.unitPrice);
                         if (newName !== null && newUnitPrice !== null) {
                           Edit(elem.id, newName, newUnitPrice);
                         }

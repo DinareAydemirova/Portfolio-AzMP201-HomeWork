@@ -11,14 +11,14 @@ const Basket = ({ basket }) => {
             <h6>Name: {item.name}</h6>
             <span>Unit Price: {item.unitPrice}</span>
             <div className={style.count}>
-              <button>-</button>
+              <button className={style.countProd}>-</button>
               <p>0</p>
-              <button>+</button>
+              <button className={style.countProd}>+</button>
             </div>
           </div>
         ))}
       </div>
-      <p>Total: </p>
+      <h4>Total: </h4>
     </div>
   );
 };
