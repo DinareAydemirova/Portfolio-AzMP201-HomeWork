@@ -1,0 +1,55 @@
+.box{
+    margin-left: 50px;
+}
+.basketInfo{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 30px;
+    background-color: antiquewhite ;
+    border-radius: 0 50px 0 50px;
+    margin: 20px;
+    border: none;
+    width: 500px;
+   
+}
+.count {
+    display: flex;
+    align-items: center; 
+    border: 1px solid black;
+    width: max-content;
+    background-color: rgb(247, 201, 143);
+    border: none;
+    padding: 0 15px;
+    font-size: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  .countProd {
+    border: none;
+    background-color: rgb(247, 201, 143);
+    padding: 5px 10px; 
+  }
+  
+  .count p {
+    margin: 0; 
+   
+  }
+  .bottom{
+    display: flex;
+    justify-content: space-between;
+  }
+  .del{
+    border: none;
+    background-color: rgba(255, 0, 0, 0.514);
+    color: white;
+    border-radius: 8px;
+  }
+  .delete{
+    border: none;
+    background-color: rgba(255, 0, 0, 0.514);
+    color: white;
+    border-radius: 8px;
+    margin-top: 10px;
+  }

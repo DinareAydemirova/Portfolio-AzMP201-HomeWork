@@ -1,0 +1,41 @@
+.table{
+  margin: 20px;
+ 
+}
+.headings{
+    
+    background-color: rgba(197, 184, 83, 0.558) !important;
+    border: 3px solid black !important;
+}
+.datas{
+    border: 2px solid black !important;
+    background-color: antiquewhite !important;
+}
+.del{
+    background-color: rgba(255, 0, 0, 0.419);
+    border: none;
+
+   
+}
+.del:hover{
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.753);
+}
+.edit{
+    background-color: rgba(0, 128, 0, 0.634);
+    border: none;
+
+}
+.edit:hover{
+    background-color: rgb(0, 128, 0);
+}
+.basket{
+    background-color: rgba(0, 128, 128, 0.837);
+    border: none;
+}
+.basket:hover{
+    background-color: teal;
+}
+.body{
+    display: flex;
+}
