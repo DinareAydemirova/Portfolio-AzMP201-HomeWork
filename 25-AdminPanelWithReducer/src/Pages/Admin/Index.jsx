@@ -220,13 +220,13 @@ const Admin = ({ state, dispatch }) => {
                         const count = parseInt(elem.rating.count);
                         let countColorClass = "";
                         if (count < 100) {
-                          countColorClass = "text-red-500";
+                          countColorClass = "bg-red-500";
                         } else if (count < 200) {
-                          countColorClass = "text-yellow-500";
+                          countColorClass = "bg-yellow-500";
                         }
                         return (
                           <tr key={elem.id}>
-                            <th className="text-center text-dark font-medium text-base py-5 px-2 bg-[#F3F6FF] border-b border-l border-[#E8E8E8]">
+                            <th className={`text-center text-dark font-medium text-base py-5 px-2 bg-[#F3F6FF] border-b border-l border-[#E8E8E8] ${countColorClass}`}>
                               <img src={elem.image} alt="" className=" w-28" />
                             </th>
                             <td
@@ -254,7 +254,7 @@ const Admin = ({ state, dispatch }) => {
                             >
                               {elem.rating.count}
                             </td>
-                            <td className="text-center font-medium py-5 px-2 bg-[#F3F6FF] border-b border-l border-[#E8E8E8]">
+                            <td className={`text-center font-medium py-5 px-2 bg-[#F3F6FF] border-b border-l border-[#E8E8E8] ${countColorClass}`}>
                               <button
                                 type="button"
                                 className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
@@ -271,7 +271,7 @@ const Admin = ({ state, dispatch }) => {
                                 Delete
                               </button>
                             </td>
-                            <td className="text-center font-medium py-5 px-2 bg-[#F3F6FF] border-b border-l border-[#E8E8E8]">
+                            <td className={`text-center font-medium py-5 px-2 bg-[#F3F6FF] border-b border-l border-[#E8E8E8] ${countColorClass}`}>
                               <button
                                 type="button"
                                 className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
