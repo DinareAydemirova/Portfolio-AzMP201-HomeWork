@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { BASE_URL } from "../../services/api";
+import { BASE_URL, endPoints } from "../../services/api";
 import { Link } from "react-router-dom";
 
 const Admin = ({ state, dispatch }) => {
@@ -264,7 +264,7 @@ const Admin = ({ state, dispatch }) => {
                                   );
                                   setData([...arr]);
                                   axios.delete(
-                                    `https://fakestoreapi.com/products/${elem.id}`
+                                    `${BASE_URL + endPoints.products +elem.id}`
                                   );
                                 }}
                               >
