@@ -7,42 +7,72 @@
       "surname": "aydamirova",
       "password": "123",
       "email": "mail.com",
+      "registeredDate": "2024-05-04T12:00:00Z",
       "isAdmin": false,
+      "gender": "femele",
       "basket": [],
       "favorites": []
     },
     {
-      "id": "2",
+      "id": "3",
       "userName": "gulçin",
       "name": "gulçin",
       "surname": "isgenderove",
       "password": "123",
       "email": "mail.com",
+      "registeredDate": "2024-05-04T12:00:00Z",
       "isAdmin": false,
+      "gender": "femele",
       "basket": [],
       "favorites": []
     },
     {
-      "id": "2",
+      "id": "4",
       "userName": "yaqub",
       "name": "yaqub",
       "surname": "hacili",
       "password": "123",
       "email": "mail.com",
-      "isAdmin": false,
+      "registeredDate": "2024-05-04T12:00:00Z",
+      "isAdmin": true,
+      "gender": "male",
       "basket": [],
       "favorites": []
     },
     {
-      "id": "2",
+      "id": "5",
       "userName": "shahnaz",
       "name": "shahnaz",
       "surname": "rustemli",
       "password": "123",
       "email": "mail.com",
+      "registeredDate": "2024-05-04T12:00:00Z",
       "isAdmin": false,
+      "gender": "femele",
       "basket": [],
       "favorites": []
+    },
+    {
+      "id": "10743648-cc9c-4e96-b9c8-274a443df747",
+      "userName": "dilara123",
+      "name": "dilara",
+      "surname": "aydamirova",
+      "password": "1235da",
+      "email": "dilara@gmail.com",
+      "registeredDate": "2024-05-04T12:00:00Z",
+      "isAdmin": true,
+      "gender": "femele"
+    },
+    {
+      "id": "ffa7f8e3-83f2-4cbb-a6b8-e5453a9e18b7",
+      "userName": "arzu ",
+      "name": "arzu",
+      "surname": "yahyayeva",
+      "password": "yyyyy88888",
+      "email": "arzu@gmail.com",
+      "registeredDate": "2024-05-22T10:57",
+      "isAdmin": false,
+      "gender": "femele"
     }
   ],
   "products": [
@@ -212,16 +242,6 @@
       "rating": {
         "rate": 4.5,
         "count": 146
-      }
-    },
-    {
-      "id": "2e1a",
-      "image": "https://cdn.obag.filoblu.com/media/catalog/product/cache/25162cc576cf81151d28507649e6339b/O/B/OBAGBG10_ECSN6_936_NOTAG_UNICA_L2.jpg",
-      "title": "bag",
-      "price": "222",
-      "category": "bag",
-      "rating": {
-        "count": "22"
       }
     },
     {

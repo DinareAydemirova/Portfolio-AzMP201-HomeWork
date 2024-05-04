@@ -7,6 +7,8 @@ const Admin = ({ state, dispatch }) => {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
   const [sortType, setSortType] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
+
 
   const SearchInput = (e) => {
     setSearch(e.target.value);
@@ -20,6 +22,11 @@ const Admin = ({ state, dispatch }) => {
         product.title.toLowerCase().includes(search.toLowerCase())
       );
     }
+    if (selectedCategory) {
+      filteredProducts = filteredProducts.filter(
+        (product) => product.category === selectedCategory
+      );
+    }
 
     if (sortType === "a-z") {
       filteredProducts.sort((a, b) => a.title.localeCompare(b.title));
@@ -30,6 +37,7 @@ const Admin = ({ state, dispatch }) => {
     } else if (sortType === "low-high") {
       filteredProducts.sort((a, b) => b.price - a.price);
     }
+   
 
     return filteredProducts;
   };
@@ -38,6 +46,12 @@ const Admin = ({ state, dispatch }) => {
     setSortType(type);
   };
 
+  const ChooseCategory=()=>{
+    setcategory(!category)
+  }
+  const handleCategoryChange = (e) => {
+    setSelectedCategory(e.target.value);
+  };
   return (
     <div>
       <>
@@ -48,42 +62,60 @@ const Admin = ({ state, dispatch }) => {
         {/* ====== Table Section Start */}
 
         <section className="bg-white py-20 lg:py-[120px]">
-          <div className="container gap-x-1">
+        <div class="container gap-x-1 flex items-center justify-between">
+        <div>
             <input
-              className="bg-gray-200 appearance-none border-2 border-gray-200 rounded  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-              placeholder="Search..."
-              value={search}
-              onChange={SearchInput}
+                class="bg-gray-200 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                placeholder="Search..."
+                value={search}
+                onChange={SearchInput}
             />
             <button
-              type="button"
-              className="focus:outline-none text-white bg-indigo-500 hover:bg-indigo-500 focus:ring-4 focus:ring-indigo-500 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-indigo-500 dark:hover:bg-indigo-500 dark:focus:ring-indigo-500"
-              onClick={() => handleSort("a-z")}
+                type="button"
+                class="focus:outline-none text-white bg-indigo-500 hover:bg-indigo-500 focus:ring-4 focus:ring-indigo-500 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-indigo-500 dark:hover:bg-indigo-500 dark:focus:ring-indigo-500"
+                onClick={() => handleSort("a-z")}
             >
-              A-Z
+                A-Z
             </button>
             <button
-              type="button"
-              className="focus:outline-none text-white bg-indigo-500 hover:bg-indigo-500 focus:ring-4 focus:ring-indigo-500 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-indigo-500 dark:hover:bg-indigo-500 dark:focus:ring-indigo-500"
-              onClick={() => handleSort("z-a")}
+                type="button"
+                class="focus:outline-none text-white bg-indigo-500 hover:bg-indigo-500 focus:ring-4 focus:ring-indigo-500 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-indigo-500 dark:hover:bg-indigo-500 dark:focus:ring-indigo-500"
+                onClick={() => handleSort("z-a")}
             >
-              Z-A
+                Z-A
             </button>
             <button
-              type="button"
-              className="focus:outline-none text-white bg-indigo-500 hover:bg-indigo-500 focus:ring-4 focus:ring-indigo-500 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-indigo-500 dark:hover:bg-indigo-500 dark:focus:ring-indigo-500"
-              onClick={() => handleSort("high-low")}
+                type="button"
+                class="focus:outline-none text-white bg-indigo-500 hover:bg-indigo-500 focus:ring-4 focus:ring-indigo-500 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-indigo-500 dark:hover:bg-indigo-500 dark:focus:ring-indigo-500"
+                onClick={() => handleSort("high-low")}
             >
-              High-Low
+                High-Low
             </button>
             <button
-              type="button"
-              className="focus:outline-none text-white bg-indigo-500 hover:bg-indigo-500 focus:ring-4 focus:ring-indigo-500 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-indigo-500 dark:hover:bg-indigo-500 dark:focus:ring-indigo-500"
-              onClick={() => handleSort("low-high")}
+                type="button"
+                class="focus:outline-none text-white bg-indigo-500 hover:bg-indigo-500 focus:ring-4 focus:ring-indigo-500 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-indigo-500 dark:hover:bg-indigo-500 dark:focus:ring-indigo-500"
+                onClick={() => handleSort("low-high")}
             >
-              Low-High
+                Low-High
             </button>
-          </div>
+        </div>
+        <div>
+        <select
+          id="categories"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          value={selectedCategory}
+          onChange={handleCategoryChange}
+        >
+          <option value="">Choose a category</option>
+          <option value="electronics">Electronics</option>
+          <option value="women's clothing">Women's Clothing</option>
+          <option value="jewelery">Jewelry</option>
+          <option value="men's clothing">Men's Clothing</option>
+        </select>
+           
+        </div>
+    </div>
+
           <div className="container">
             <div className="flex flex-wrap -mx-4">
               <div className="w-full px-4">
@@ -213,6 +245,22 @@ const Admin = ({ state, dispatch }) => {
                         >
                           Edit
                         </th>
+                        <th
+                          className="
+                     w-1/6
+                     min-w-[160px]
+                     text-lg
+                     font-semibold
+                     text-white
+                     py-2
+                     lg:py-7
+                     px-2
+                     lg:px-4
+                     border-r border-transparent
+                     "
+                        >
+                          Detail
+                        </th>
                       </tr>
                     </thead>
                     <tbody>
@@ -226,7 +274,9 @@ const Admin = ({ state, dispatch }) => {
                         }
                         return (
                           <tr key={elem.id}>
-                            <th className={`text-center text-dark font-medium text-base py-5 px-2 bg-[#F3F6FF] border-b border-l border-[#E8E8E8] ${countColorClass}`}>
+                            <th
+                              className={`text-center text-dark font-medium text-base py-5 px-2 bg-[#F3F6FF] border-b border-l border-[#E8E8E8] ${countColorClass}`}
+                            >
                               <img src={elem.image} alt="" className=" w-20" />
                             </th>
                             <td
@@ -254,7 +304,9 @@ const Admin = ({ state, dispatch }) => {
                             >
                               {elem.rating.count}
                             </td>
-                            <td className={`text-center font-medium  bg-[#F3F6FF] border-b border-l border-[#E8E8E8] ${countColorClass}`}>
+                            <td
+                              className={`text-center font-medium  bg-[#F3F6FF] border-b border-l border-[#E8E8E8] ${countColorClass}`}
+                            >
                               <button
                                 type="button"
                                 className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
@@ -264,19 +316,31 @@ const Admin = ({ state, dispatch }) => {
                                   );
                                   setData([...arr]);
                                   axios.delete(
-                                    `${BASE_URL + endPoints.products +elem.id}`
+                                    `${BASE_URL + endPoints.products + elem.id}`
                                   );
                                 }}
                               >
                                 Delete
                               </button>
                             </td>
-                            <td className={`text-center font-medium py-5 px-2 bg-[#F3F6FF] border-b border-l border-[#E8E8E8] ${countColorClass}`}>
+                            <td
+                              className={`text-center font-medium py-5 px-2 bg-[#F3F6FF] border-b border-l border-[#E8E8E8] ${countColorClass}`}
+                            >
                               <button
                                 type="button"
                                 className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
                               >
                                 <Link to="/edit">Edit</Link>
+                              </button>
+                            </td>
+                            <td
+                              className={`text-center font-medium py-5 px-2 bg-[#F3F6FF] border-b border-l border-[#E8E8E8] ${countColorClass}`}
+                            >
+                              <button
+                                type="button"
+                                className="focus:outline-none text-white bg-indigo-500 hover:bg-indigo-600 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+                              >
+                                Detail
                               </button>
                             </td>
                           </tr>
