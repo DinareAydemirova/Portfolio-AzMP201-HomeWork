@@ -34,13 +34,16 @@ const Layout = () => {
               <li className="md:px-4 md:py-2 hover:text-indigo-400">
               <Link to="/post">Post</Link>
               </li>
-              <li className="md:px-4 md:py-2 hover:text-indigo-400">
-              <Link to="/Edit">Edit</Link>
-              </li>
+           
               <li className="md:px-4 md:py-2 hover:text-indigo-400">
               <Link to="/users">Users</Link>
               </li>
-            
+              <li className="md:px-4 md:py-2 hover:text-indigo-400">
+              <Link to="/login">Login</Link>
+              </li>
+              <li className="md:px-4 md:py-2 hover:text-indigo-400">
+              <Link to="/register">Register</Link>
+              </li>
             </ul>
           </div>
           <div className="order-2 md:order-3">

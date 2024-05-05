@@ -4,10 +4,7 @@ import { BASE_URL, endPoints } from "../../services/api";
 import { getAllData } from "../../services/index";
 
 const Login = () => {
-  const [loginData, setloginData] = useState({
-    userName: "",
-    password: "",
-  });
+
 
   const navigate=useNavigate()
 
@@ -21,26 +18,7 @@ const Login = () => {
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
         <form
           className="space-y-6"
-          onSubmit={(e) => {
-            e.preventDefault();
-            // console.log(loginData);
-
-            getAllData(endPoints.users).then((res) => {
-              // console.log(res);
-              let loginUser = res.find(
-                (elem) =>
-                  elem.userName == loginData.userName &&
-                  elem.password == loginData.password
-              );
-              // console.log(loginUser);
-              navigate("/")
-              if(loginUser){
-                setloginData()
-              }else{
-                console.log("error");
-              }
-            });
-          }}
+        
         >
           <div>
             <label
@@ -53,11 +31,9 @@ const Login = () => {
               <input
                 type="text"
                 required=""
-                value={loginData.userName}
+               
                 className="block w-full p-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                onChange={(e) => {
-                  setloginData({ ...loginData, userName: e.target.value });
-                }}
+               
               />
             </div>
           </div>
@@ -75,13 +51,11 @@ const Login = () => {
                 id="password"
                 name="password"
                 type="password"
-                value={loginData.password}
+               
                 autoComplete="current-password"
                 required=""
                 className="block w-full p-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                onChange={(e) => {
-                  setloginData({ ...loginData, password: e.target.value });
-                }}
+               
               />
             </div>
           </div>

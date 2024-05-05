@@ -157,10 +157,14 @@ const Post = () => {
                   ) {
                     setInputValues({
                       ...inputValues,
-                      rating: { rate: e.target.value },
+                      rating: {
+                        ...inputValues.rating,
+                        rate: e.target.value,
+                      },
                     });
                   }
                 }}
+                
               />
             </div>
           </div>
@@ -186,10 +190,14 @@ const Post = () => {
                   ) {
                     setInputValues({
                       ...inputValues,
-                      rating: { count: e.target.value },
+                      rating: {
+                        ...inputValues.rating,
+                        count: e.target.value,
+                      },
                     });
                   }
                 }}
+                
               />
             </div>
           </div>

@@ -35,7 +35,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={isLogin ? <Layout /> : <Login />}>
+          <Route path="/" element={<Layout />}>
             <Route
               index
               element={<Admin state={state} dispatch={dispatch} />}
@@ -48,7 +48,7 @@ function App() {
             />
             <Route path="noPage" element={<NoPage />} />
           </Route>
-          <Route path="login" element={isLogin? <NoPage />:<Login/>} />
+          <Route path="login" element={<Login/>} />
           <Route path="register" element={<Register />} />
 
         </Routes>
