@@ -38,9 +38,7 @@ const Layout = () => {
               <li className="md:px-4 md:py-2 hover:text-indigo-400">
               <Link to="/users">Users</Link>
               </li>
-              <li className="md:px-4 md:py-2 hover:text-indigo-400">
-              <Link to="/login">Login</Link>
-              </li>
+             
               <li className="md:px-4 md:py-2 hover:text-indigo-400">
               <Link to="/register">Register</Link>
               </li>
@@ -61,7 +59,11 @@ const Layout = () => {
                   clipRule="evenodd"
                 />
               </svg>
-              <span>Login</span>
+              <span>
+             
+              <Link to="/login">Login</Link>
+              
+              </span>
             </button>
           </div>
         </div>

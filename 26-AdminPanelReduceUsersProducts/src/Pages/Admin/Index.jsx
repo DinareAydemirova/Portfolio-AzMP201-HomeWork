@@ -10,10 +10,6 @@ const Admin = ({ state, dispatch }) => {
   const [selectedCategory, setSelectedCategory] = useState("");
 
 
-  const SearchInput = (e) => {
-    setSearch(e.target.value);
-  };
-
   const filterProducts = () => {
     let filteredProducts = state.products;
 
@@ -42,14 +38,17 @@ const Admin = ({ state, dispatch }) => {
     return filteredProducts;
   };
 
+  
+  const SearchInput = (e) => {
+    setSearch(e.target.value);
+  };
+
   const handleSort = (type) => {
     setSortType(type);
   };
 
-  const ChooseCategory=()=>{
-    setcategory(!category)
-  }
-  const handleCategoryChange = (e) => {
+
+  const CategoryChange = (e) => {
     setSelectedCategory(e.target.value);
   };
   return (
@@ -104,7 +103,7 @@ const Admin = ({ state, dispatch }) => {
           id="categories"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           value={selectedCategory}
-          onChange={handleCategoryChange}
+          onChange={CategoryChange}
         >
           <option value="">Choose a category</option>
           <option value="electronics">Electronics</option>
