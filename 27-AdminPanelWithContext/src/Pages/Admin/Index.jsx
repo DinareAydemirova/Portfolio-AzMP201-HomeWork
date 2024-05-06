@@ -1,56 +1,49 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import axios from "axios";
 import { BASE_URL, endPoints } from "../../services/api";
 import { Link, Navigate } from "react-router-dom";
+import { SearchContext } from "../../context/SearchProvider/Index";
+import { SortContext } from "../../context/SortProvider/Index";
 
 const Products = ({ state, dispatch }) => {
   const [data, setData] = useState([]);
-  const [search, setSearch] = useState("");
-  const [sortType, setSortType] = useState("");
+
+
   const [selectedCategory, setSelectedCategory] = useState("");
+const {search ,setSearch,searchedData}=useContext(SearchContext)
+const { sortType, setSortType, sortedData }=useContext(SortContext)
 
 
   const filterProducts = () => {
     let filteredProducts = state.products;
 
-    if (search) {
-      filteredProducts = filteredProducts.filter((product) =>
-        product.title.toLowerCase().includes(search.toLowerCase())
-      );
-    }
+   
     if (selectedCategory) {
       filteredProducts = filteredProducts.filter(
         (product) => product.category === selectedCategory
       );
     }
 
-    if (sortType === "a-z") {
-      filteredProducts.sort((a, b) => a.title.localeCompare(b.title));
-    } else if (sortType === "z-a") {
-      filteredProducts.sort((a, b) => b.title.localeCompare(a.title));
-    } else if (sortType === "high-low") {
-      filteredProducts.sort((a, b) => a.price - b.price);
-    } else if (sortType === "low-high") {
-      filteredProducts.sort((a, b) => b.price - a.price);
-    }
+
    
 
     return filteredProducts;
   };
 
-  
-  const SearchInput = (e) => {
-    setSearch(e.target.value);
-  };
+
 
   const handleSort = (type) => {
     setSortType(type);
   };
 
+  const SearchInput = (e) => {
+    setSearch(e.target.value);
+  };
 
   const CategoryChange = (e) => {
     setSelectedCategory(e.target.value);
   };
+  
   return (
     <div>
       <>
@@ -263,7 +256,7 @@ const Products = ({ state, dispatch }) => {
                       </tr>
                     </thead>
                     <tbody>
-                      {filterProducts().map((elem) => {
+                      {searchedData().filteredProducts && sortedData().filteredProducts && filterProducts().map((elem) => {
                         const count = parseInt(elem.rating.count);
                         let countColorClass = "";
                         if (count < 100) {

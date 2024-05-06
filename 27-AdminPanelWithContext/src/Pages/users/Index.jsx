@@ -1,16 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { getAllData } from "../../services";
 import { BASE_URL, endPoints } from "../../services/api";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { SearchContext } from "../../context/SearchProvider/Index";
+import { SortContext } from "../../context/SortProvider/Index";
 
 const Users = ({ state, dispatch }) => {
-  const [sortType, setSortType] = useState("");
+  // const [sortType, setSortType] = useState("");
   const [data, setData] = useState([]);
-  const [search, setSearch] = useState("");
   const [showAdmins, setShowAdmins] = useState(false);
   const [showFemales, setShowFemales] = useState(false);
   const [showMales, setShowMales] = useState(false);
+  const { search, setSearch, searchedData } = useContext(SearchContext);
+  const { sortType, setSortType, sortedData }=useContext(SortContext)
 
 
   useEffect(() => {
@@ -33,28 +36,20 @@ const Users = ({ state, dispatch }) => {
 
     let filteredUsers = [...state.users];
 
-    if (search) {
-      filteredUsers = filteredUsers.filter((user) =>
-        user.name.toLowerCase().includes(search.toLowerCase())
-      );
-    }
-
-    if (sortType === "a-z") {
-      filteredUsers.sort((a, b) => a.name.localeCompare(b.name));
-    } else if (sortType === "z-a") {
-      filteredUsers.sort((a, b) => b.name.localeCompare(a.name));
-    }
+   
 
     if (showAdmins) {
       filteredUsers = filteredUsers.filter((user) => user.isAdmin);
     }
-
+  
     if (showFemales) {
-      filteredUsers = filteredUsers.filter((user) => user.gender === "femele");
+      filteredUsers = filteredUsers.filter((user) => user.gender === "female");
     }
+  
     if (showMales) {
       filteredUsers = filteredUsers.filter((user) => user.gender === "male");
     }
+  
     return filteredUsers;
   };
 
@@ -71,7 +66,11 @@ const Users = ({ state, dispatch }) => {
   const ShowMales = () => {
     setShowMales(!showMales);
   };
+
+  const filteredUsers = sortedData().filteredUsers && filterUsers() && searchedData().filteredUsers;
+  
   return (
+
     <div className="relative overflow-x-auto">
       <div className=" my-3">
         <input
@@ -177,7 +176,14 @@ const Users = ({ state, dispatch }) => {
           </tr>
         </thead>
         <tbody>
-          {filterUsers()?.map((elem) => {
+          {/* {console.log("searchedData", searchedData().filteredUsers)}
+          {console.log("sortedData", sortedData().filteredUsers)}
+          {console.log("show", filterUsers())}
+          {console.log("all", filteredUsers)} */}
+
+
+
+          { filteredUsers.map((elem) => {
             return (
               <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                 <td className="px-6 py-4">{elem.id}</td>

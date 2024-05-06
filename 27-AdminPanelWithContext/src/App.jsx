@@ -4,7 +4,6 @@ import { useEffect, useReducer, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 import "./App.css";
-import Admin from "./Pages/Admin/Index";
 import Post from "./Pages/Post/Index";
 import Edit from "./Pages/Edit/Index";
 import Layout from "./Layout/Navbar/Index";
@@ -18,6 +17,8 @@ import NoPage from "./Pages/noPage/Index";
 import Dashboard from "./Pages/Dashboard/İndex";
 import Detail from "./Pages/detail/Index";
 import Products from "./Pages/Admin/Index";
+import SearchProvider from "./context/SearchProvider/Index";
+import SortProvider from "./context/SortProvider/Index";
 
 function App() {
   const [state, dispatch] = useReducer(reducer, {
@@ -37,8 +38,10 @@ function App() {
 
   const isLogin = false;
   return (
-    <>
+      <SortProvider state={state} dispatch={dispatch}>
+    <SearchProvider state={state} dispatch={dispatch} >
       <BrowserRouter>
+
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route
@@ -63,7 +66,8 @@ function App() {
           <Route path="register" element={<Register />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </SearchProvider>
+      </SortProvider>
   );
 }
 
