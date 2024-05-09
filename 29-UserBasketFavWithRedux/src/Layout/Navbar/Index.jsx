@@ -1,7 +1,12 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
+import {useSelector} from 'react-redux'
 
 const Layout = () => {
+  const basket = useSelector(state => state.card.basket)
+  const wishlist=useSelector(state=>state.card.wishlist)
+  const totalItems = useSelector(state => state.card.totalItems);
+
   return (
     <div>
       <nav className="bg-gray-200 shadow shadow-gray-300 w-100 px-8 md:px-auto">
@@ -40,6 +45,14 @@ const Layout = () => {
               <li className="md:px-4 md:py-2 hover:text-indigo-400">
               <Link to="/basket">Basket</Link>
               </li>
+              <li>{totalItems}</li>
+
+
+              <li className="md:px-4 md:py-2 hover:text-indigo-400">
+              <Link to="/wishlist">Wishlist</Link>
+              </li>
+              <li>{wishlist.length}</li>
+
               <li className="md:px-4 md:py-2 hover:text-indigo-400">
               <Link to="/post">Post</Link>
               </li>

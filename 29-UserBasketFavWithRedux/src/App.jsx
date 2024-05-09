@@ -17,6 +17,7 @@ import ProdDetail from "./Pages/detail/Index";
 import Cards from "./Pages/cards/Cards";
 import Basket from "./Pages/basket/Basket";
 import Dashboard from "./Pages/Dashboard/İndex";
+import Wishlist from "./Pages/wishlist/Wishlist";
 
 function App() {
   const [state, dispatch] = useReducer(reducer, {
@@ -44,6 +45,7 @@ function App() {
               path="products"
               element={<Admin state={state} dispatch={dispatch} />}
             />
+
              <Route
               index
               element={<Dashboard state={state} dispatch={dispatch} />}
@@ -53,6 +55,8 @@ function App() {
             <Route path="post" element={<Post />} />
             <Route path="cards" element={<Cards/>}/>
             <Route path="basket" element={<Basket/>}/>
+            <Route path="wishlist" element={<Wishlist/>}/>
+
             <Route
               path="users"
               element={<Users state={state} dispatch={dispatch} />}

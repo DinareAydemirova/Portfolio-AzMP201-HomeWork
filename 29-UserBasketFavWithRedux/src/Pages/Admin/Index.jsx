@@ -264,7 +264,7 @@ const Admin = ({ state, dispatch }) => {
                     </thead>
                     <tbody>
                       {filterProducts().map((elem) => {
-                        const count = parseInt(elem.rating.count);
+                        const count = parseInt(elem?.rating?.count);
                         let countColorClass = "";
                         if (count < 100) {
                           countColorClass = "bg-red-500";
@@ -296,12 +296,12 @@ const Admin = ({ state, dispatch }) => {
                             <td
                               className={`text-center font-medium  bg-[#F3F6FF] border-b border-l border-[#E8E8E8] ${countColorClass}`}
                             >
-                              {elem.rating.rate}
+                              {elem?.rating?.rate}
                             </td>
                             <td
                               className={`text-center font-medium  bg-[#F3F6FF] border-b border-l border-[#E8E8E8] ${countColorClass}`}
                             >
-                              {elem.rating.count}
+                              {elem?.rating?.count}
                             </td>
                             <td
                               className={`text-center font-medium  bg-[#F3F6FF] border-b border-l border-[#E8E8E8] ${countColorClass}`}

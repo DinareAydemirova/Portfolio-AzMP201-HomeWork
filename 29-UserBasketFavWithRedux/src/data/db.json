@@ -67,6 +67,16 @@
       "isAdmin": true,
       "gender": "femele",
       "balence": 250
+    },
+    {
+      "id": "9b619238-88f7-465a-a024-a87a351873d2",
+      "userName": "gdfg",
+      "name": "Hhbdus",
+      "surname": "Dsdfsdf",
+      "password": "dsfsdr4343qS",
+      "email": "dinaraaydamirova@gmail.com",
+      "registeredDate": "2024-05-21T16:53",
+      "isAdmin": true
     }
   ],
   "products": [
