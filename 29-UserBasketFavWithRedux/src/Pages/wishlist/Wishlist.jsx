@@ -7,7 +7,12 @@ const Wishlist = () => {
 const dispatch=useDispatch()
 const wishlist=useSelector((state)=>state.card.wishlist)
   return (
+    <div>
+    <h2 className="title font-manrope font-bold text-4xl leading-10 mt-8 text-center text-indigo-700">
+    Faworites
+  </h2>
     <div className="flex justify-center mr-10">
+      
     <div className="cards container  grid grid-cols-4    h-100">
       {wishlist &&
         wishlist.map((item, index) => (
@@ -72,6 +77,7 @@ const wishlist=useSelector((state)=>state.card.wishlist)
           </div>
         ))}
     </div>
+  </div>
   </div>
   )
 }

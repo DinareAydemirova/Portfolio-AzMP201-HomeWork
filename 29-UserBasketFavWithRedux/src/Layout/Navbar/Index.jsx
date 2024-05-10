@@ -45,13 +45,13 @@ const Layout = () => {
               <li className="md:px-4 md:py-2 hover:text-indigo-400">
               <Link to="/basket">Basket</Link>
               </li>
-              <li>{totalItems}</li>
+              <li className="text-orange-500">{totalItems}</li>
 
 
               <li className="md:px-4 md:py-2 hover:text-indigo-400">
               <Link to="/wishlist">Wishlist</Link>
               </li>
-              <li>{wishlist.length}</li>
+              <li className="text-orange-500">{wishlist.length}</li>
 
               <li className="md:px-4 md:py-2 hover:text-indigo-400">
               <Link to="/post">Post</Link>

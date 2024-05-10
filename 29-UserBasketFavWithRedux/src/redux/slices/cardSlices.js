@@ -41,6 +41,7 @@ export const cardSlice = createSlice({
       const existingItemIndex = state.basket.findIndex(item => item.id === newItem.id);
       if (existingItemIndex !== -1) {
         state.basket[existingItemIndex].quantity += 1;
+        
       } else {
         state.basket.push(newItem);
       }
@@ -60,6 +61,7 @@ export const cardSlice = createSlice({
       const item = state.basket.find(item => item.id === action.payload.id);
       if (item && item.quantity > 1) {
         item.quantity -= 1;
+        state.totalItems -= 1;
       }
       updateLocalStorage(state.basket, state.wishlist);
     },
@@ -67,6 +69,7 @@ export const cardSlice = createSlice({
       const item = state.basket.find(item => item.id === action.payload.id);
       if (item) {
         item.quantity += 1;
+        state.totalItems += 1;
       }
       updateLocalStorage(state.basket, state.wishlist);
     },

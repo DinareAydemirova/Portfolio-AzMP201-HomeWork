@@ -24,7 +24,7 @@ const Basket = () => {
 
   return (
     <div>
-      <h2 className="title font-manrope font-bold text-4xl leading-10 mt-8 text-center text-black">
+      <h2 className="title font-manrope font-bold text-4xl leading-10 mt-8 text-center text-indigo-700">
         Basket
       </h2>
       {basket &&
