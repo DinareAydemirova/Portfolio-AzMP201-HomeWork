@@ -3,7 +3,6 @@ import { Outlet, Link } from "react-router-dom";
 import {useSelector} from 'react-redux'
 
 const Layout = () => {
-  const basket = useSelector(state => state.card.basket)
   const wishlist=useSelector(state=>state.card.wishlist)
   const totalItems = useSelector(state => state.card.totalItems);
 
@@ -83,7 +82,7 @@ const Layout = () => {
               </svg>
               <span>
              
-              <Link to="/login">Login</Link>
+              <Link to="/login">Log out</Link>
               
               </span>
             </button>

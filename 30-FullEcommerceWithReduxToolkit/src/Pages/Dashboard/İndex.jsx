@@ -1,25 +1,25 @@
 import React, { useEffect } from 'react'
 import { getAllData } from '../../services'
 import { endPoints } from '../../services/api'
+import { useDispatch, useSelector } from 'react-redux'
+import { setProducts, setUsers } from '../../redux/slices/mainSlice'
+import { useSearchParams } from 'react-router-dom'
 
-const Dashboard = ({ state, dispatch }) => {
+const Dashboard = () => {
+  const dispatch=useDispatch()
+  const products=useSelector((state)=>state.products.products)
+  const users=useSelector((state)=>state.users.users)
 
     useEffect(() => {
         getAllData(endPoints.users).then((data) => {
-          dispatch({
-            type: "SetUsers",
-            users: data,
-          });
+          dispatch(setUsers(data));
         });
       }, []);
 
       useEffect(() => {
         getAllData(endPoints.products).then((data) => {
-          dispatch({
-            type: "SetProducts",
-            products: data,
-          });
-          console.log(state.products);
+          dispatch(setProducts(data));
+          
         });
       }, []);
   return (
@@ -43,7 +43,7 @@ const Dashboard = ({ state, dispatch }) => {
                   Products
                 </h5>
                 <span className="font-semibold text-xl text-blueGray-700">
-                 {state.products.length}
+                 {products.length}
                 </span>
               </div>
               <div className="relative w-auto pl-4 flex-initial">
@@ -65,7 +65,7 @@ const Dashboard = ({ state, dispatch }) => {
                   Users
                 </h5>
                 <span className="font-semibold text-xl text-blueGray-700">
-                  {state.users.length}
+                  {users.length}
                 </span>
               </div>
               <div className="relative w-auto pl-4 flex-initial">

@@ -3,8 +3,10 @@ import { getAllData } from "../../services";
 import { BASE_URL, endPoints } from "../../services/api";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setUsers } from "../../redux/slices/mainSlice";
 
-const Users = ({ state, dispatch }) => {
+const Users = () => {
   const [sortType, setSortType] = useState("");
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
@@ -12,13 +14,13 @@ const Users = ({ state, dispatch }) => {
   const [showFemales, setShowFemales] = useState(false);
   const [showMales, setShowMales] = useState(false);
 
+const dispatch=useDispatch()
+const users=useSelector((state)=>state.users.users)
 
   useEffect(() => {
     getAllData(endPoints.users).then((data) => {
-      dispatch({
-        type: "SetUsers",
-        users: data,
-      });
+      dispatch(setUsers(data))
+      // console.log(data);
     });
   }, []);
 
@@ -27,11 +29,11 @@ const Users = ({ state, dispatch }) => {
   };
 
   const filterUsers = () => {
-    if (!state.users) {
+    if (!users) {
       return [];
     }
 
-    let filteredUsers = [...state.users];
+    let filteredUsers = [...users];
 
     if (search) {
       filteredUsers = filteredUsers.filter((user) =>
@@ -50,7 +52,7 @@ const Users = ({ state, dispatch }) => {
     }
 
     if (showFemales) {
-      filteredUsers = filteredUsers.filter((user) => user.gender === "femele");
+      filteredUsers = filteredUsers.filter((user) => user.gender === "female");
     }
     if (showMales) {
       filteredUsers = filteredUsers.filter((user) => user.gender === "male");
@@ -193,7 +195,7 @@ const Users = ({ state, dispatch }) => {
                   <button
                     className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
                     onClick={() => {
-                      let arr = state.users.filter((e) => e.id !== elem.id);
+                      let arr = users.filter((e) => e.id !== elem.id);
                       setData([...arr]);
                       axios.delete(`${BASE_URL + endPoints.users + elem.id}`);
                     }}

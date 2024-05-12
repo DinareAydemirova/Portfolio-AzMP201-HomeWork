@@ -10,12 +10,12 @@ const Login = () => {
   const navigate = useNavigate();
 
   const [loginData, setloginData] = useState({
-    username: "",
+    userName: "",
     password: "",
   });
 
   const initialValues = {
-    username: "",
+    userName: "",
     password: "",
     rememberMe: false,
   };
@@ -37,7 +37,7 @@ const Login = () => {
                 // Use a predicate function to find the user
                 let loginUser = res.find(
                     (user) =>
-                        user.userName === values.username && user.password === values.password
+                        user.userName === values.userName && user.password === values.password
                 );
                 // console.log(loginUser);
 
@@ -55,7 +55,7 @@ const Login = () => {
             <Form className="space-y-6">
               <div>
                 <label
-                  htmlFor="username"
+                  htmlFor="userName"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
                   Username
@@ -63,13 +63,13 @@ const Login = () => {
                 <div className="mt-2">
                   <Field
                     type="text"
-                    id="username"
-                    name="username"
-                    value={loginData.username}
+                    id="userName"
+                    name="userName"
+                    value={loginData.userName}
                     placeholder="Enter your username"
                     className="block w-full p-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     onChange={(e) => {
-                      setloginData({ ...loginData, username: e.target.value });
+                      setloginData({ ...loginData, userName: e.target.value });
                       handleChange(e);
                     }}
                   />

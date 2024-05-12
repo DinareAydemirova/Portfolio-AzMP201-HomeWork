@@ -9,16 +9,10 @@ const Register = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (values, { setSubmitting }) => {
-    try {
+   
       const response = await postData(endPoints.users, values);
-      console.log("User registered successfully:", response);
       navigate("/login");
-    } catch (error) {
-      console.error("Error registering user:", error);
-      // Handle error, maybe display an error message to the user
-    } finally {
-      setSubmitting(false);
-    }
+ 
   };
 
   return (

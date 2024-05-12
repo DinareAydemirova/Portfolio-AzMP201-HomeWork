@@ -77,17 +77,6 @@
       "email": "dinaraaydamirova@gmail.com",
       "registeredDate": "2024-05-21T16:53",
       "isAdmin": true
-    },
-    {
-      "id": "d7ac",
-      "username": "aytan123",
-      "password": "123Aa",
-      "name": "Aytan",
-      "surname": "Aydamirova",
-      "email": "mi7hnp1be@code.edu.az",
-      "registrationDate": "2024-05-22T18:26",
-      "gender": "",
-      "isAdmin": false
     }
   ],
   "products": [

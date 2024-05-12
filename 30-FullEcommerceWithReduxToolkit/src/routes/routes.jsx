@@ -1,4 +1,4 @@
-import { Children, useReducer } from "react";
+
 import Layout from "../Layout/Navbar/Index";
 import Admin from "../Pages/Admin/Index";
 import Cards from "../Pages/cards/Cards";
@@ -10,10 +10,13 @@ import Dashboard from "../Pages/Dashboard/İndex";
 import Post from "../Pages/Post/Index";
 import Users from "../Pages/users/Index";
 import NoPage from "../Pages/noPage/Index";
+import ProdDetail from "../Pages/detail/Index";
 
 const isLogin = true;
 
+
 const routes = [
+ 
 
   {
     path: "/",
@@ -49,13 +52,28 @@ const routes = [
           path:"/nopage",
           element:<NoPage/>
         },
+        {
+          path:"/admin",
+          element: <Admin/>
+      
+        },
+        {
+          path:"/products/:id",
+          element: < ProdDetail/>
+      
+        },
+        {
+          path:"/",
+          element: <Dashboard/>
+      
+        },
     
     ],
   },
  
   {
     path: "/login",
-    element:isLogin? <NoPage /> : <Login/>,
+    element: <Login/>,
   },
   {
     path: "/register",

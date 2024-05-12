@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import { BASE_URL, endPoints } from "../../services/api";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-const Admin = ({ state, dispatch }) => {
+const Admin = () => {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
   const [sortType, setSortType] = useState("");
@@ -11,31 +12,35 @@ const Admin = ({ state, dispatch }) => {
 
 
   const filterProducts = () => {
-    let filteredProducts = state.products;
+    const products=useSelector((state)=> state.products.products)
+    // console.log(products);
+    let  filteredProd= [...products];
+    console.log(filteredProd);
+    
 
     if (search) {
-      filteredProducts = filteredProducts.filter((product) =>
+      filteredProd = filteredProd.filter((product) =>
         product.title.toLowerCase().includes(search.toLowerCase())
       );
     }
     if (selectedCategory) {
-      filteredProducts = filteredProducts.filter(
+      filteredProd = filteredProd.filter(
         (product) => product.category === selectedCategory
       );
     }
 
     if (sortType === "a-z") {
-      filteredProducts.sort((a, b) => a.title.localeCompare(b.title));
+      filteredProd.sort((a, b) => a.title.localeCompare(b.title));
     } else if (sortType === "z-a") {
-      filteredProducts.sort((a, b) => b.title.localeCompare(a.title));
+      filteredProd.sort((a, b) => b.title.localeCompare(a.title));
     } else if (sortType === "high-low") {
-      filteredProducts.sort((a, b) => a.price - b.price);
+      filteredProd.sort((a, b) => a.price - b.price);
     } else if (sortType === "low-high") {
-      filteredProducts.sort((a, b) => b.price - a.price);
+      filteredProd.sort((a, b) => b.price - a.price);
     }
    
 
-    return filteredProducts;
+    return filteredProd;
   };
 
   
@@ -263,7 +268,7 @@ const Admin = ({ state, dispatch }) => {
                       </tr>
                     </thead>
                     <tbody>
-                      {filterProducts().map((elem) => {
+                      {filterProducts()?.map((elem) => {
                         const count = parseInt(elem?.rating?.count);
                         let countColorClass = "";
                         if (count < 100) {
@@ -310,7 +315,7 @@ const Admin = ({ state, dispatch }) => {
                                 type="button"
                                 className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
                                 onClick={() => {
-                                  let arr = state.products.filter(
+                                  let arr = products.filter(
                                     (e) => e.id !== elem.id
                                   );
                                   setData([...arr]);
@@ -336,12 +341,13 @@ const Admin = ({ state, dispatch }) => {
                             <td
                               className={`text-center font-medium py-5 px-2 bg-[#F3F6FF] border-b border-l border-[#E8E8E8] ${countColorClass}`}
                             >
-                              <button
+                              <Link
+                                to={`/products/${elem.id}`}
                                 type="button"
                                 className="focus:outline-none text-white bg-indigo-500 hover:bg-indigo-600 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
                               >
                                 Detail
-                              </button>
+                              </Link>
                             </td>
                           </tr>
                         );
