@@ -1,0 +1,218 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "johndoe123",
+      "full_name": "John Doe",
+      "email": "johndoe@example.com",
+      "phone_number": "+1234567890",
+      "birthdate": "1990-05-20",
+      "gender": "male",
+      "profile_picture": "https://www.perfocal.com/blog/content/images/size/w960/2021/01/Perfocal_17-11-2019_TYWFAQ_100_standard-3.jpg",
+      "bio": "Just a regular guy living life to the fullest!",
+      "followers": 1500,
+      "following": 500,
+      "friends":[
+        {
+          "friends_id":"10",
+          "username":"John123"
+        },
+        {
+          "friends_id":"12",
+          "username":"Sara_a"
+        }
+
+      ],
+      "posts": [
+        {
+          "post_id": "post1",
+          "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS1u05OPc7MSt9f5Dg2QMSbRPu_FHowIjog-jxeSwHIw&s",
+          "caption": "Enjoying the sunset 🌅 #nature",
+          "likes": 200,
+
+          "comments": [
+            {
+              "comment_id": "comment1",
+              "user": "janedoe456",
+              "comment_text": "Beautiful view!"
+            }
+          ]
+
+        },
+        {
+          "post_id": "post2",
+          "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS1u05OPc7MSt9f5Dg2QMSbRPu_FHowIjog-jxeSwHIw&s",
+          "caption": "Enjoying the sunset 🌅 #nature",
+          "likes": 200,
+
+          "comments": [
+            {
+              "comment_id": "comment1",
+              "user": "janedoe456",
+              "comment_text": "Beautiful view!"
+            }
+          ]
+
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "username": "janedoe456",
+      "full_name": "Jane Doe",
+      "email": "janedoe@example.com",
+      "phone_number": "+1987654321",
+      "birthdate": "1995-08-12",
+      "gender": "female",
+      "profile_picture": "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
+      "bio": "Dreamer | Explorer | Foodie 🍕",
+      "followers": 200,
+      "following": 600,
+      "friends":[
+        {
+          "friends_id":"10",
+          "username":"John123"
+        },
+        {
+          "friends_id":"12",
+          "username":"Sara_a"
+        }
+
+      ],
+      "posts": [
+        {
+          "post_id": "post3",
+          "image_url": "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
+          "caption": "Exploring new places! 🌍 #travel",
+          "likes": 350,
+          "comments": [
+            {
+              "comment_id": "comment3",
+              "user": "johndoe123",
+              "comment_text": "Looks like an amazing adventure!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "username": "janedoe456",
+      "full_name": "Jane Doe",
+      "email": "janedoe@example.com",
+      "phone_number": "+1987654321",
+      "birthdate": "1995-08-12",
+      "gender": "female",
+      "profile_picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT20e4FMgGlXySlDQJ1B6_AZo4j6uKMzV7WuG7EVa-p5Q&s",
+      "bio": "Dreamer | Explorer | Foodie 🍕",
+      "followers": 2500,
+      "following": 700,
+      "friends":[
+        {
+          "friends_id":"10",
+          "username":"John123"
+        },
+        {
+          "friends_id":"12",
+          "username":"Sara_a"
+        }
+
+      ],
+      "posts": [
+        {
+          "post_id": "post3",
+          "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT20e4FMgGlXySlDQJ1B6_AZo4j6uKMzV7WuG7EVa-p5Q&s",
+          "caption": "Exploring new places! 🌍 #travel",
+          "likes": 350,
+          "comments": [
+            {
+              "comment_id": "comment3",
+              "user": "johndoe123",
+              "comment_text": "Looks like an amazing adventure!"
+            }
+          ]
+        },
+        {
+          "post_id": "post3",
+          "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAMWde6OBJPo8xsyjX6g0HoNv_V3jmwObQ2cMNOam4Ww&s",
+          "caption": "Exploring new places! 🌍 #travel",
+          "likes": 350,
+          "comments": [
+            {
+              "comment_id": "comment3",
+              "user": "johndoe123",
+              "comment_text": "Looks like an amazing adventure!"
+            }
+          ]
+        },
+        {
+          "post_id": "post3",
+          "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAMWde6OBJPo8xsyjX6g0HoNv_V3jmwObQ2cMNOam4Ww&s",
+          "caption": "Exploring new places! 🌍 #travel",
+          "likes": 350,
+          "comments": [
+            {
+              "comment_id": "comment3",
+              "user": "johndoe123",
+              "comment_text": "Looks like an amazing adventure!"
+            }
+          ]
+        }
+      ]
+    },
+    
+    {
+      "id": "4",
+      "username": "janedoe456",
+      "full_name": "Jane Doe",
+      "email": "janedoe@example.com",
+      "phone_number": "+1987654321",
+      "birthdate": "1995-08-12",
+      "gender": "female",
+      "profile_picture": "https://img.freepik.com/free-photo/portrait-beautiful-young-woman-with-colorful-face-make-up_23-2149580873.jpg",
+      "bio": "Dreamer | Explorer | Foodie 🍕",
+      "followers": 2500,
+      "following": 700,
+      "friends":[
+        {
+          "friend_id":"10",
+          "username":"John123"
+        },
+        {
+          "friend_id":"12",
+          "username":"Sara_a"
+        }
+
+      ],
+      "posts": [
+        {
+          "post_id": "post3",
+          "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMp2QN2WCx7VRAXuJme-AcdxJJeXRSM3obFhXX_uIKvQ&s",
+          "caption": "Exploring new places! 🌍 #travel",
+          "likes": 350,
+          "comments": [
+            {
+              "comment_id": "comment3",
+              "user": "johndoe123",
+              "comment_text": "Looks like an amazing adventure!"
+            }
+          ]
+        },
+        {
+          "post_id": "post6",
+          "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMp2QN2WCx7VRAXuJme-AcdxJJeXRSM3obFhXX_uIKvQ&s",
+          "caption": "Exploring new places! 🌍 #travel",
+          "likes": 350,
+          "comments": [
+            {
+              "comment_id": "comment3",
+              "user": "johndoe123",
+              "comment_text": "Looks like an amazing adventure!"
+            }
+          ]
+        }
+      ]
+      
+    }
+  ]
+}
