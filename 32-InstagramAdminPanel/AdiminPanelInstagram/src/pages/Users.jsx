@@ -21,6 +21,8 @@ const Users = () => {
   return (
     <div className="relative overflow-x-auto">
       <h1 className="font-bold m-3 text-xl">Users</h1>
+    <Link to="/createUser" class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-3 ml-1 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Create User</Link>
+
       <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
         <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
           <tr>
@@ -35,6 +37,9 @@ const Users = () => {
             </th>
             <th scope="col" className="px-3 py-2">
               Email
+            </th>
+            <th scope="col" className="px-3 py-2">
+              Password
             </th>
             <th scope="col" className="px-3 py-2">
               Delete
@@ -55,6 +60,8 @@ const Users = () => {
                 <td className="px-3 py-2">{elem.username}</td>
                 <td className="px-3 py-2">{elem.full_name}</td>
                 <td className="px-3 py-2">{elem.email}</td>
+                <td className="px-3 py-2">{elem.password}</td>
+
                 <td className="px-3 py-2">
                   <button
                     className="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"

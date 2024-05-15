@@ -40,6 +40,9 @@ const UserDetail = () => {
             <p className="text-lgtext-gray-600 flex items-center">
               <p className="text-green-500">Email: </p> {user.email}
             </p>
+            <p className="text-lgtext-gray-600 flex items-center">
+              <p className="text-green-500">Password: </p> {user.password}
+            </p>
             <p className="text-lg text-gray-600 flex items-center">
               <p className="text-green-500">Phone Number: </p>
               {user.phone_number}

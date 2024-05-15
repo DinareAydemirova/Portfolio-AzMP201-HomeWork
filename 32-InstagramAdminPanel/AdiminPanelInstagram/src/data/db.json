@@ -5,6 +5,7 @@
       "username": "johndoe123",
       "full_name": "John Doe",
       "email": "johndoe@example.com",
+      "password": "123hhhh",
       "phone_number": "+1234567890",
       "birthdate": "1990-05-20",
       "gender": "male",
@@ -12,16 +13,15 @@
       "bio": "Just a regular guy living life to the fullest!",
       "followers": 1500,
       "following": 500,
-      "friends":[
+      "friends": [
         {
-          "friends_id":"10",
-          "username":"John123"
+          "friends_id": "10",
+          "username": "John123"
         },
         {
-          "friends_id":"12",
-          "username":"Sara_a"
+          "friends_id": "12",
+          "username": "Sara_a"
         }
-
       ],
       "posts": [
         {
@@ -29,7 +29,6 @@
           "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS1u05OPc7MSt9f5Dg2QMSbRPu_FHowIjog-jxeSwHIw&s",
           "caption": "Enjoying the sunset 🌅 #nature",
           "likes": 200,
-
           "comments": [
             {
               "comment_id": "comment1",
@@ -37,14 +36,12 @@
               "comment_text": "Beautiful view!"
             }
           ]
-
         },
         {
           "post_id": "post2",
           "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS1u05OPc7MSt9f5Dg2QMSbRPu_FHowIjog-jxeSwHIw&s",
           "caption": "Enjoying the sunset 🌅 #nature",
           "likes": 200,
-
           "comments": [
             {
               "comment_id": "comment1",
@@ -52,7 +49,6 @@
               "comment_text": "Beautiful view!"
             }
           ]
-
         }
       ]
     },
@@ -61,6 +57,7 @@
       "username": "janedoe456",
       "full_name": "Jane Doe",
       "email": "janedoe@example.com",
+      "password": "123hhhh",
       "phone_number": "+1987654321",
       "birthdate": "1995-08-12",
       "gender": "female",
@@ -68,16 +65,15 @@
       "bio": "Dreamer | Explorer | Foodie 🍕",
       "followers": 200,
       "following": 600,
-      "friends":[
+      "friends": [
         {
-          "friends_id":"10",
-          "username":"John123"
+          "friends_id": "10",
+          "username": "John123"
         },
         {
-          "friends_id":"12",
-          "username":"Sara_a"
+          "friends_id": "12",
+          "username": "Sara_a"
         }
-
       ],
       "posts": [
         {
@@ -100,6 +96,7 @@
       "username": "janedoe456",
       "full_name": "Jane Doe",
       "email": "janedoe@example.com",
+      "password": "123hhhh",
       "phone_number": "+1987654321",
       "birthdate": "1995-08-12",
       "gender": "female",
@@ -107,16 +104,15 @@
       "bio": "Dreamer | Explorer | Foodie 🍕",
       "followers": 2500,
       "following": 700,
-      "friends":[
+      "friends": [
         {
-          "friends_id":"10",
-          "username":"John123"
+          "friends_id": "10",
+          "username": "John123"
         },
         {
-          "friends_id":"12",
-          "username":"Sara_a"
+          "friends_id": "12",
+          "username": "Sara_a"
         }
-
       ],
       "posts": [
         {
@@ -160,12 +156,12 @@
         }
       ]
     },
-    
     {
       "id": "4",
       "username": "janedoe456",
       "full_name": "Jane Doe",
       "email": "janedoe@example.com",
+      "password": "123hhhh",
       "phone_number": "+1987654321",
       "birthdate": "1995-08-12",
       "gender": "female",
@@ -173,16 +169,15 @@
       "bio": "Dreamer | Explorer | Foodie 🍕",
       "followers": 2500,
       "following": 700,
-      "friends":[
+      "friends": [
         {
-          "friend_id":"10",
-          "username":"John123"
+          "friend_id": "10",
+          "username": "John123"
         },
         {
-          "friend_id":"12",
-          "username":"Sara_a"
+          "friend_id": "12",
+          "username": "Sara_a"
         }
-
       ],
       "posts": [
         {
@@ -212,7 +207,40 @@
           ]
         }
       ]
-      
+    },
+    {
+      "id": "6d3f",
+      "username": "aytan123",
+      "password": "65656yryr",
+      "full_name": "msdhdjfhdlhfj",
+      "email": "aytanaydamirova@gmail.com",
+      "phone_number": "",
+      "birthdate": "",
+      "gender": "",
+      "profile_picture": "https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg",
+      "bio": ",dmvkdfjglj;ikmf",
+      "followers": "33",
+      "following": "33",
+      "posts": [
+        {
+          "image_url": "",
+          "caption": "",
+          "likes": 0,
+          "comments": [
+            {
+              "user": "",
+              "comment_text": ""
+            }
+          ]
+        }
+      ],
+      "friends": [
+        {
+          "username": ""
+        }
+      ],
+      "profilePicture": "https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg",
+      "postPicture": "https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg"
     }
   ]
 }

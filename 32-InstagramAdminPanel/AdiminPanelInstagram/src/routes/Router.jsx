@@ -1,8 +1,8 @@
-import { Children } from "react";
 import Navbar from "../Layout/Navbar";
 import Users from "../pages/Users";
 import UserDetail from "../pages/UserDetail";
 import UserEdit from "../pages/UserEdit";
+import CreateUser from "../pages/CreateUser";
 const routes = [
   {
     path: "/",
@@ -19,6 +19,10 @@ const routes = [
       {
         path: "/edit",
         element: <UserEdit />,
+      },
+      {
+        path: "/createUser",
+        element: <CreateUser />,
       },
     ],
   },
